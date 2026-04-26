@@ -1,5 +1,6 @@
 {
-  "name": "VCS",
+  "name": "Vini Cavalcanti School",
   "description": "Escola de cursos 3D com visão autoral, prática e feita para evolução real.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }

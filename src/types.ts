@@ -1,6 +1,8 @@
 export interface Course {
   title: string;
   desc: string;
+  expandedDesc?: string;
+  image?: string;
   level: string;
   lang: string;
   software: string;
@@ -13,6 +15,7 @@ export interface Course {
 export interface Bundle {
   title: string;
   desc: string;
+  image?: string;
   price: string;
   includes: string[];
   checkout: string;
@@ -20,6 +23,9 @@ export interface Bundle {
 
 export interface Testimonial {
   name: string;
+  country?: string;
+  course?: string;
+  photo?: string;
   text: string;
 }
 

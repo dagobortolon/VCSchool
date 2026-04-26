@@ -1,32 +1,36 @@
 import React from 'react';
 
-export default function FAQ() {
-  const questions = [
-    "Os cursos estão em português ou inglês?",
-    "A compra é feita onde?",
-    "O acesso é imediato?",
-    "Os cursos servem para iniciantes?",
-    "Existem combos com melhor custo?"
-  ];
+interface FAQProps {
+  t: {
+    badge: string;
+    title: string;
+  };
+  items: Array<{ q: string; a: string }>;
+}
 
+export default function FAQ({ t, items }: FAQProps) {
   return (
-    <section id="faq" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-10 sm:px-6 lg:px-8">
-      <div className="text-center">
+    <section id="faq" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
         <div className="inline-flex rounded-full bg-[#FFF2E7] px-3 py-1 text-xs font-medium text-[#EF7722] ring-1 ring-[#EF7722]/10">
-          FAQ
+          {t.badge}
         </div>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Dúvidas rápidas antes da compra</h2>
+        <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h2>
       </div>
-      <div className="mt-8 space-y-3">
-        {questions.map((question) => (
-          <details key={question} className="rounded-[22px] border border-black/5 bg-white px-5 py-4 shadow-sm">
+      <div className="space-y-4">
+        {items.map((item, i) => (
+          <details key={item.q} className="group rounded-[28px] border border-black/5 bg-white px-6 py-5 shadow-sm transition-all open:shadow-md">
             <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">
-              <div className="font-medium">{question}</div>
-              <div className="text-black/35">+</div>
+              <div className="font-semibold text-black/80">{item.q}</div>
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-xl font-light text-black transition-transform group-open:rotate-45">
+                +
+              </div>
             </summary>
-            <p className="pt-3 text-sm leading-6 text-black/60">
-              Texto de apoio para responder essa dúvida de forma rápida e objetiva.
-            </p>
+            <div className="mt-5 border-t border-black/5 pt-5">
+              <p className="text-base leading-relaxed text-black/60">
+                {item.a}
+              </p>
+            </div>
           </details>
         ))}
       </div>
