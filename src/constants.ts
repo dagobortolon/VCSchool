@@ -36,12 +36,40 @@ export const TRANSLATIONS = {
       loadMore: "Load more courses"
     },
     mentorship: {
+      sectionTitle: "One-on-One Mentorship",
       badge: "Mentorship",
       label: "For those who want to go further",
       title: "Vini Cavalcanti Mentorship Program",
       body: "10 weeks of direct, one-on-one guidance with a Senior Character Artist who works in the industry every day. You'll build a complete character from the very first blockout to a portfolio-ready final piece, with feedback and support at every stage of the process.\n\nThis is not a course. It's a mentorship.",
-      button: "Learn more about the Mentorship",
-      price: "$600"
+      button: "Sign up now!",
+      price: "$600",
+      modules: [
+        {
+          title: "Module 1: Sculpture & Character Foundation (ZBrush & Blender)",
+          weeks: [
+            { label: "Week 1", text: "Primary Forms & Blocking. Focus on silhouette and proportions. Use Zbrush for initial blocking for a more organic start." },
+            { label: "Week 2", text: "Head & Facial Features. Deep dive into facial anatomy, planes of the face, and character personality in ZBrush." },
+            { label: "Week 3", text: "Hands & Anatomical Detailing. Refining the secondary forms of the body and hands in ZBrush." },
+            { label: "Week 4", text: "Hair Block-out. Sculpting the primary volumes of the hair to define flow and silhouette." },
+            { label: "Week 5", text: "Clothing & Accessories. Hard-surface modeling in Blender or organic cloth sculpting in ZBrush." },
+            { label: "Week 6", text: "Posing & Composition. Bringing the character to life. Final silhouette check and refinement of the pose." }
+          ]
+        },
+        {
+          title: "Module 2: Advanced Grooming & LookDev (Houdini & Substance)",
+          weeks: [
+            { label: "Week 7", text: "Texturing & PBR Workflow. Creating high-quality textures in Substance Painter." },
+            { label: "Week 8", text: "Intro to Houdini Grooming. Setting up the Houdini environment, creating guides, and initializing." },
+            { label: "Week 9", text: "Advanced Grooming & LookDev. Refinement of clumping, frizz, and technical noise." }
+          ]
+        },
+        {
+          title: "Module 3: Final Presentation (Houdini)",
+          weeks: [
+            { label: "Week 10", text: "Final Rendering & Portfolio. Rendering high-resolution passes and portfolio presentation." }
+          ]
+        }
+      ]
     },
     testimonials: {
       title: "Artists already on their way.",
@@ -106,12 +134,40 @@ export const TRANSLATIONS = {
       loadMore: "Ver mais cursos"
     },
     mentorship: {
+      sectionTitle: "Mentoria Individual",
       badge: "Mentoria",
       label: "Para quem quer ir mais fundo",
       title: "Vini Cavalcanti Mentorship Program",
       body: "10 semanas de acompanhamento direto com um Senior Character Artist que trabalha na indústria todos os dias. Você vai construir um personagem completo, do primeiro blockout até a peça final pronta para portfólio, com feedback e suporte em cada etapa do processo.\n\nIsso não é um curso. É uma mentoria.",
-      button: "Quero saber mais sobre a Mentoria",
-      price: "$600"
+      button: "Inscreva-se agora!",
+      price: "$600",
+      modules: [
+        {
+          title: "Módulo 1: Fundação de Escultura e Personagem (ZBrush & Blender)",
+          weeks: [
+            { label: "Semana 1", text: "Formas Primárias & Blocagem. Foco em silhueta e proporções. Uso de ZBrush para um início mais orgânico." },
+            { label: "Semana 2", text: "Cabeça & Traços Faciais. Mergulho profundo em anatomia facial e personalidade no ZBrush." },
+            { label: "Semana 3", text: "Mãos & Detalhamento Anatômico. Refino de formas secundárias no ZBrush." },
+            { label: "Semana 4", text: "Blocagem de Cabelo. Esculturas dos volumes primários para definir fluxo e silhueta." },
+            { label: "Semana 5", text: "Roupas & Acessórios. Modelagem Hard-surface no Blender ou escultura orgânica no ZBrush." },
+            { label: "Semana 6", text: "Pose & Composição. Dando vida ao personagem. Checagem final de silhueta e pose." }
+          ]
+        },
+        {
+          title: "Módulo 2: Grooming Avançado & LookDev (Houdini & Substance)",
+          weeks: [
+            { label: "Semana 7", text: "Texturização & Fluxo PBR. Criando texturas de alta qualidade no Substance Painter." },
+            { label: "Semana 8", text: "Intro ao Grooming no Houdini. Configuração de ambiente, criação de guias e inicialização." },
+            { label: "Semana 9", text: "Grooming Avançado & LookDev. Refino de clumping, frizz e ruído técnico." }
+          ]
+        },
+        {
+          title: "Módulo 3: Apresentação Final (Houdini)",
+          weeks: [
+            { label: "Semana 10", text: "Render Final & Portfólio. Passes em alta resolução e organização para apresentação profissional." }
+          ]
+        }
+      ]
     },
     testimonials: {
       title: "Artistas que já estão no caminho.",
@@ -148,7 +204,7 @@ export const COURSES_EN: Course[] = [
     title: "Grooming for Stylized Characters",
     desc: "Learn to create stylized hair and fur in Houdini, from scratch to a portfolio-ready result.",
     expandedDesc: "Grooming is one of the most valued and least taught skills in the 3D character pipeline. In this course, you'll learn to create stylized hair and fur using one of the most powerful tools in the industry: Houdini. Starting from the fundamentals so no prior experience with the software is required, all the way to building a complete stylized hair groom, each lesson is designed to give you confidence and fluidity in the process.",
-    image: "/images/course-1.webp",
+    image: "/images/grooming.png",
     level: "Intermediate",
     lang: "EN",
     software: "Houdini",
@@ -173,7 +229,7 @@ export const COURSES_EN: Course[] = [
     title: "ZBrush for Stylized Characters",
     desc: "From concept to finished sculpt, learn the complete process for creating original stylized characters in ZBrush.",
     expandedDesc: "This course covers Vini's complete workflow for designing and sculpting original stylized characters. As a Visual Development artist, the focus is on the creative decisions and technical execution required to build a character's identity directly in 3D.\n\nExclusive student bonus 🎁: Purchasing this course gives you free access to an exclusive topology basemesh, brush pack, and custom ZBrush UI. You also receive a 30% discount on the TopoGun 3 Perpetual License.",
-    image: "/images/course-2.webp",
+    image: "/images/zbrush.png",
     level: "Beginner / Intermediate",
     lang: "EN (PT Subtitles)",
     software: "ZBrush",
@@ -191,7 +247,7 @@ export const COURSES_EN: Course[] = [
     title: "Retopology in TopoGun 3",
     desc: "Clean, efficient topology is what separates an amateur model from a production-ready one.",
     expandedDesc: "Retopology is the step many artists dread, but it makes all the difference in the final result. This hands-on course will help you build efficient, clean topology without the common beginner mistakes. We'll cover how to tackle tricky areas like hands, create perfect edge loops for animation, and keep your poly count low without sacrificing quality.\n\nExclusive student bonus 🎁: Purchasing this course makes you eligible for a 30% discount on the TopoGun 3 Perpetual License.",
-    image: "/images/course-3.webp",
+    image: "/images/retopology.png",
     level: "Intermediate",
     lang: "EN",
     software: "TopoGun 3",
@@ -284,7 +340,7 @@ export const COURSES_PT: Course[] = [
     title: "Grooming para Personagens Estilizados",
     desc: "Aprenda a criar cabelos e pelos estilizados no Houdini, do zero ao resultado final digno de portfólio.",
     expandedDesc: "Grooming é uma das habilidades mais valorizadas e menos ensinadas do pipeline de personagens 3D. Nesse curso, você vai aprender a criar cabelos e pelos estilizados com uma das ferramentas mais poderosas da indústria: o Houdini. Começando pelos fundamentos para que você não precise de nenhuma experiência prévia com o software, até a construção completa de um hair groom estilizado, cada aula foi pensada para te dar confiança e fluidez no processo.",
-    image: "/images/course-1.webp",
+    image: "/images/grooming.png",
     level: "Intermediário",
     lang: "EN",
     software: "Houdini",
@@ -309,7 +365,7 @@ export const COURSES_PT: Course[] = [
     title: "ZBrush para Personagens Estilizados",
     desc: "Do conceito à escultura finalizada, aprenda o processo completo de criação de personagens estilizados originais no ZBrush.",
     expandedDesc: "Nesse curso você vai aprender o processo completo que o Vini usa para projetar e esculpir personagens estilizados originais. Como artista de desenvolvimento visual, o foco está nas decisões criativas e na execução técnica necessárias para construir a identidade de um personagem diretamente no 3D.\n\nBônus exclusivo para alunos 🎁: Ao comprar este curso, você recebe acesso gratuito ao basemesh de topologia exclusivo, pack de brushes e UI personalizada do ZBrush. Você também tem direito a 30% de desconto na Licença Perpétua do TopoGun 3.",
-    image: "/images/course-2.webp",
+    image: "/images/zbrush.png",
     level: "Iniciante / Intermediário",
     lang: "EN (Legendas PT)",
     software: "ZBrush",
@@ -327,7 +383,7 @@ export const COURSES_PT: Course[] = [
     title: "Retopologia no TopoGun 3",
     desc: "Topologia limpa e eficiente é o que separa um modelo amador de um modelo pronto para produção.",
     expandedDesc: "Retopologia é aquela etapa que muitos artistas temem, mas que faz toda a diferença no resultado final. Nesse curso prático você vai aprender a construir topologia eficiente e limpa sem cometer os erros mais comuns de quem está começando. Vamos abordar como resolver áreas desafiadoras como as mãos, criar edge loops perfeitos para animação e manter a contagem de polígonos baixa sem abrir mão da qualidade.\n\nBônus exclusivo para alunos 🎁: Ao comprar este curso, você tem direito a 30% de desconto na Licença Perpétua do TopoGun 3.",
-    image: "/images/course-3.webp",
+    image: "/images/retopology.png",
     level: "Intermediário",
     lang: "EN",
     software: "TopoGun 3",
