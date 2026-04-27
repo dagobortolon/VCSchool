@@ -37,7 +37,7 @@ export default function Hero({ t }: HeroProps) {
           <div className="aspect-[16/11] overflow-hidden rounded-[24px] bg-[#F4F4F1] ring-1 ring-black/5">
             <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#FFF2E7] via-white to-[#EEF8FC] relative">
                <img 
-                src="/images/vini_cavalcanti_photo.png" 
+                src="/images/about-vini.webp" 
                 alt="Presentation" 
                 className="absolute inset-0 h-full w-full object-cover rounded-[24px]"
                 onError={(e) => {

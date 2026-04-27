@@ -14,7 +14,7 @@ export default function About({ t }: AboutProps) {
     <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[0.9fr_1.1fr] lg:px-8">
       <div className="overflow-hidden rounded-[30px] border border-black/5 bg-[#FFF6EE] p-0 shadow-sm relative aspect-[4/4.3]">
         <img 
-          src="/images/vini_cavalcanti_photo.png" 
+          src="/images/about-vini.webp" 
           alt="Vini Cavalcanti" 
           className="h-full w-full object-cover rounded-[30px]"
           onError={(e) => {

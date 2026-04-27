@@ -38,7 +38,7 @@ export default function Footer({ socialLinks, t }: FooterProps) {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div className="flex flex-col gap-4">
             <img 
-              src="/images/vini_cavalcanti_3d_school_logo.png" 
+              src="/images/logo_vini_cavalcanti_3D.svg" 
               alt="Vini Cavalcanti School" 
               className="h-10 w-auto opacity-40 grayscale" 
             />
