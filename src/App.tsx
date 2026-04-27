@@ -25,7 +25,7 @@ export default function App() {
           t={t.courses} 
           courses={lang === 'en' ? COURSES_EN : COURSES_PT} 
         />
-        <BundleList t={t.bundles} bundles={BUNDLES} />
+        {/* <BundleList t={t.bundles} bundles={BUNDLES} /> */}
         <Mentorship t={t.mentorship} />
         <Testimonials t={t.testimonials} />
         <FAQ t={t.faq} items={FAQ_ITEMS[lang]} />

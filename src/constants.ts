@@ -40,7 +40,8 @@ export const TRANSLATIONS = {
       buy: "Get this course",
       loadMore: "Load more courses",
       priceLabel: "Price",
-      lessonsTitle: "Lessons included"
+      lessonsTitle: "Lessons included",
+      comingSoon: "Coming Soon"
     },
     mentorship: {
       sectionTitle: "One-on-One Mentorship",
@@ -165,7 +166,8 @@ export const TRANSLATIONS = {
       buy: "Comprar curso",
       loadMore: "Ver mais cursos",
       priceLabel: "Preço",
-      lessonsTitle: "Aulas inclusas"
+      lessonsTitle: "Aulas inclusas",
+      comingSoon: "Em Breve"
     },
     mentorship: {
       sectionTitle: "Mentoria Individual",
@@ -306,7 +308,8 @@ export const COURSES_EN: Course[] = [
       "ZBrush — Sculpting, Detailing, and Expression",
       "Final Render — Lighting, Scene, and Visual Storytelling"
     ],
-    checkout: "#"
+    checkout: "#",
+    comingSoon: true
   },
   {
     title: "Grooming for Stylized Characters - EN (PT Subtitles)",
@@ -389,7 +392,8 @@ export const COURSES_PT: Course[] = [
       "ZBrush — Escultura, Detalhamento e Expressão",
       "Render Final — Iluminação, Cena e Storytelling Visual"
     ],
-    checkout: "#"
+    checkout: "#",
+    comingSoon: true
   },
   {
     title: "Grooming para Personagens Estilizados - EN (Legendas PT)",

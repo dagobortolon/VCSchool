@@ -25,6 +25,7 @@ interface CourseListProps {
     loadMore: string;
     priceLabel: string;
     lessonsTitle: string;
+    comingSoon: string;
   };
 }
 
@@ -110,7 +111,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                 {course.comingSoon && (
                   <div className="absolute right-0 top-0 z-10 h-24 w-24 overflow-hidden">
                     <div className="absolute left-[-10px] top-[26px] w-[140px] rotate-45 bg-[#EF7722] py-1 text-center text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
-                      Em Breve
+                      {t.comingSoon}
                     </div>
                   </div>
                 )}
