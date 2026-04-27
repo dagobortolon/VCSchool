@@ -310,32 +310,6 @@ export const COURSES_EN: Course[] = [
     ],
     checkout: "#",
     comingSoon: true
-  },
-  {
-    title: "Grooming for Stylized Characters - EN (PT Subtitles)",
-    desc: "Learn to create stylized hair and fur in Houdini, from scratch to a portfolio-ready result.",
-    expandedDesc: "Grooming is one of the most valued and least taught skills in the 3D character pipeline. In this course, you'll learn to create stylized hair and fur using one of the most powerful tools in the industry: Houdini. Starting from the fundamentals so no prior experience with the software is required, all the way to building a complete stylized hair groom, each lesson is designed to give you confidence and fluidity in the process.",
-    image: "/images/course_grooming_for_stylized_characters.webp",
-    level: "Intermediate",
-    lang: "EN (PT Subtitles)",
-    software: "Houdini",
-    duration: "In development",
-    price: "$49",
-    learn: [
-      "Introduction to Houdini and the workspace",
-      "Introduction to Karma (render)",
-      "Importing and setting up character geometry",
-      "Introduction to HairGen",
-      "Blocking the main guides",
-      "Blocking the side guides",
-      "Refining the first side blockout",
-      "Blocking the left side of the hair",
-      "Introduction to Groombear and top guides blockout",
-      "Groombear main tools and adding volume to guides",
-      "Back hair blockout"
-    ],
-    checkout: "#",
-    comingSoon: true
   }
 ];
 
@@ -391,32 +365,6 @@ export const COURSES_PT: Course[] = [
       "ZBrush — Blockout e Proporções Chibi",
       "ZBrush — Escultura, Detalhamento e Expressão",
       "Render Final — Iluminação, Cena e Storytelling Visual"
-    ],
-    checkout: "#",
-    comingSoon: true
-  },
-  {
-    title: "Grooming para Personagens Estilizados - EN (Legendas PT)",
-    desc: "Aprenda a criar cabelos e pelos estilizados no Houdini, do zero ao resultado final digno de portfólio.",
-    expandedDesc: "Grooming é uma das habilidades mais valorizadas e menos ensinadas do pipeline de personagens 3D. Nesse curso, você vai aprender a criar cabelos e pelos estilizados com uma das ferramentas mais poderosas da indústria: o Houdini. Começando pelos fundamentos para que você não precise de nenhuma experiência prévia com o software, até a construção completa de um hair groom estilizado, cada aula foi pensada para te dar confiança e fluidez no processo.",
-    image: "/images/course_grooming_for_stylized_characters.webp",
-    level: "Intermediário",
-    lang: "EN (Legendas PT)",
-    software: "Houdini",
-    duration: "Em desenvolvimento",
-    price: "$49",
-    learn: [
-      "Introdução ao Houdini e ao ambiente de trabalho",
-      "Introdução ao Karma (render)",
-      "Importação e setup da geometria do personagem",
-      "Introdução ao HairGen",
-      "Blocking dos guias principais",
-      "Blocking dos guias laterais",
-      "Refinamento do primeiro blockout lateral",
-      "Blocking do lado esquerdo do cabelo",
-      "Introdução ao Groombear e blockout dos guias superiores",
-      "Ferramentas principais do Groombear e adição de volume aos guias",
-      "Blockout do cabelo traseiro"
     ],
     checkout: "#",
     comingSoon: true

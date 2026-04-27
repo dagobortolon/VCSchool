@@ -32,7 +32,12 @@ export default function Hero({ t }: HeroProps) {
       <div className="relative">
         <div className="absolute -left-4 top-10 h-32 w-32 rounded-full bg-[#F9A335]/15 blur-3xl" />
         <div className="absolute -right-4 bottom-10 h-32 w-32 rounded-full bg-[#0CA6DF]/15 blur-3xl" />
-        <div className="relative overflow-hidden rounded-[24px] shadow-2xl">
+        <a 
+          href="https://www.artstation.com/viniciuscavalcanti" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="relative block overflow-hidden rounded-[24px] shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+        >
           <img 
             src="/images/hero_image.webp" 
             alt="3D Character Presentation" 
@@ -43,7 +48,7 @@ export default function Hero({ t }: HeroProps) {
               e.currentTarget.src = "https://images.unsplash.com/photo-1616440893912-2139ad9bf79a?auto=format&fit=crop&q=80&w=1200";
             }}
           />
-        </div>
+        </a>
       </div>
     </section>
   );
