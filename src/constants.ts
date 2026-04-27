@@ -255,31 +255,6 @@ export const TRANSLATIONS = {
 
 export const COURSES_EN: Course[] = [
   {
-    title: "Grooming for Stylized Characters",
-    desc: "Learn to create stylized hair and fur in Houdini, from scratch to a portfolio-ready result.",
-    expandedDesc: "Grooming is one of the most valued and least taught skills in the 3D character pipeline. In this course, you'll learn to create stylized hair and fur using one of the most powerful tools in the industry: Houdini. Starting from the fundamentals so no prior experience with the software is required, all the way to building a complete stylized hair groom, each lesson is designed to give you confidence and fluidity in the process.",
-    image: "/images/course_grooming_for_stylized_characters.webp",
-    level: "Intermediate",
-    lang: "EN",
-    software: "Houdini",
-    duration: "In development",
-    price: "$49",
-    learn: [
-      "Introduction to Houdini and the workspace",
-      "Introduction to Karma (render)",
-      "Importing and setting up character geometry",
-      "Introduction to HairGen",
-      "Blocking the main guides",
-      "Blocking the side guides",
-      "Refining the first side blockout",
-      "Blocking the left side of the hair",
-      "Introduction to Groombear and top guides blockout",
-      "Groombear main tools and adding volume to guides",
-      "Back hair blockout"
-    ],
-    checkout: "#"
-  },
-  {
     title: "ZBrush for Stylized Characters",
     desc: "From concept to finished sculpt, learn the complete process for creating original stylized characters in ZBrush.",
     expandedDesc: "This course covers Vini's complete workflow for designing and sculpting original stylized characters. As a Visual Development artist, the focus is on the creative decisions and technical execution required to build a character's identity directly in 3D.\n\nExclusive student bonus 🎁: Purchasing this course gives you free access to an exclusive topology basemesh, brush pack, and custom ZBrush UI. You also receive a 30% discount on the TopoGun 3 Perpetual License.",
@@ -303,7 +278,7 @@ export const COURSES_EN: Course[] = [
     expandedDesc: "Retopology is the step many artists dread, but it makes all the difference in the final result. This hands-on course will help you build efficient, clean topology without the common beginner mistakes. We'll cover how to tackle tricky areas like hands, create perfect edge loops for animation, and keep your poly count low without sacrificing quality.\n\nExclusive student bonus 🎁: Purchasing this course makes you eligible for a 30% discount on the TopoGun 3 Perpetual License.",
     image: "/images/course_retopologia_in_topoGun3.webp",
     level: "Intermediate",
-    lang: "EN",
+    lang: "EN (PT Subtitles)",
     software: "TopoGun 3",
     duration: "3h",
     price: "$39",
@@ -316,66 +291,12 @@ export const COURSES_EN: Course[] = [
     checkout: "#"
   },
   {
-    title: "3D Character Design for Games: Female",
-    desc: "A deep dive into creating female characters for games, from concept to final render.",
-    expandedDesc: "This course is for artists who already have a foundation in 3D modeling and want to go deeper into the design and creation of female characters for games. The focus is not on teaching the basics of each tool, but on showing the thinking process, construction, and character development from concept all the way to final render.",
-    image: "/images/course_3d_character_design_for_games_female.webp",
-    level: "Intermediate / Advanced",
-    lang: "PT",
-    software: "ZBrush, Topogun, Blender, Substance Painter, Houdini, Marmoset",
-    duration: "12h",
-    price: "$49",
-    learn: [
-      "Initial silhouette blockout",
-      "Modeling and retopology",
-      "Grooming and texturing",
-      "Real-time rendering"
-    ],
-    checkout: "#"
-  },
-  {
-    title: "3D Character Design for Games: Male",
-    desc: "A deep dive into creating male characters for games, from concept to final render.",
-    expandedDesc: "This course is for artists who already have a foundation in 3D modeling and want to go deeper into the design and creation of male characters for games. You'll follow every step of Vinicius Cavalcanti's process: from the initial silhouette blockout, through modeling, retopology, grooming, and texturing, all the way to real-time rendering at production quality.",
-    image: "/images/course_3d_character_design_for_games_male.webp",
-    level: "Intermediate / Advanced",
-    lang: "PT",
-    software: "ZBrush, Topogun, Blender, Substance Painter, Houdini, Marmoset",
-    duration: "24h",
-    price: "$49",
-    learn: [
-      "Design thinking process",
-      "Character development",
-      "Advanced texturing",
-      "Final portfolio render"
-    ],
-    checkout: "#"
-  },
-  {
-    title: "Migrating to Blender",
-    desc: "You already know a 3D software. Now it's time to learn Blender the right way.",
-    expandedDesc: "If you already work with Maya, 3ds Max, Cinema 4D, or any other 3D software and need to switch to Blender, this course was built for you. No filler, no slow beginner pace for someone who already creates in 3D. Across 47 lessons, you'll learn everything needed to work in Blender at a professional level.",
-    image: "/images/course_migrating_to_blender.webp",
-    level: "Intermediate / Advanced",
-    lang: "PT",
-    software: "Blender",
-    duration: "12h (47 lessons)",
-    price: "$49",
-    learn: [
-      "Differences and shortcuts",
-      "Blender mindset",
-      "Productive workflow",
-      "Professional level transition"
-    ],
-    checkout: "#"
-  },
-  {
     title: "Character Design: Baby Allosaurus",
     desc: "From storytelling to final render, a complete stylized character pipeline across 4 modules.",
     expandedDesc: "Creating a memorable character starts long before you open ZBrush. In this course you'll learn to build a stylized character from scratch, going through every stage of the process: from storytelling and intentional design all the way to final scene composition and portfolio render.",
     image: "/images/course_character_design_baby_allosaurus.webp",
     level: "Intermediate",
-    lang: "PT",
+    lang: "EN (PT Subtitles)",
     software: "ZBrush, Blender",
     duration: "In development",
     price: "$49",
@@ -386,35 +307,36 @@ export const COURSES_EN: Course[] = [
       "Final Render — Lighting, Scene, and Visual Storytelling"
     ],
     checkout: "#"
+  },
+  {
+    title: "Grooming for Stylized Characters - EN (PT Subtitles)",
+    desc: "Learn to create stylized hair and fur in Houdini, from scratch to a portfolio-ready result.",
+    expandedDesc: "Grooming is one of the most valued and least taught skills in the 3D character pipeline. In this course, you'll learn to create stylized hair and fur using one of the most powerful tools in the industry: Houdini. Starting from the fundamentals so no prior experience with the software is required, all the way to building a complete stylized hair groom, each lesson is designed to give you confidence and fluidity in the process.",
+    image: "/images/course_grooming_for_stylized_characters.webp",
+    level: "Intermediate",
+    lang: "EN (PT Subtitles)",
+    software: "Houdini",
+    duration: "In development",
+    price: "$49",
+    learn: [
+      "Introduction to Houdini and the workspace",
+      "Introduction to Karma (render)",
+      "Importing and setting up character geometry",
+      "Introduction to HairGen",
+      "Blocking the main guides",
+      "Blocking the side guides",
+      "Refining the first side blockout",
+      "Blocking the left side of the hair",
+      "Introduction to Groombear and top guides blockout",
+      "Groombear main tools and adding volume to guides",
+      "Back hair blockout"
+    ],
+    checkout: "#",
+    comingSoon: true
   }
 ];
 
 export const COURSES_PT: Course[] = [
-  {
-    title: "Grooming para Personagens Estilizados",
-    desc: "Aprenda a criar cabelos e pelos estilizados no Houdini, do zero ao resultado final digno de portfólio.",
-    expandedDesc: "Grooming é uma das habilidades mais valorizadas e menos ensinadas do pipeline de personagens 3D. Nesse curso, você vai aprender a criar cabelos e pelos estilizados com uma das ferramentas mais poderosas da indústria: o Houdini. Começando pelos fundamentos para que você não precise de nenhuma experiência prévia com o software, até a construção completa de um hair groom estilizado, cada aula foi pensada para te dar confiança e fluidez no processo.",
-    image: "/images/course_grooming_for_stylized_characters.webp",
-    level: "Intermediário",
-    lang: "EN",
-    software: "Houdini",
-    duration: "Em desenvolvimento",
-    price: "$49",
-    learn: [
-      "Introdução ao Houdini e ao ambiente de trabalho",
-      "Introdução ao Karma (render)",
-      "Importação e setup da geometria do personagem",
-      "Introdução ao HairGen",
-      "Blocking dos guias principais",
-      "Blocking dos guias laterais",
-      "Refinamento do primeiro blockout lateral",
-      "Blocking do lado esquerdo do cabelo",
-      "Introdução ao Groombear e blockout dos guias superiores",
-      "Ferramentas principais do Groombear e adição de volume aos guias",
-      "Blockout do cabelo traseiro"
-    ],
-    checkout: "#"
-  },
   {
     title: "ZBrush para Personagens Estilizados",
     desc: "Do conceito à escultura finalizada, aprenda o processo completo de criação de personagens estilizados originais no ZBrush.",
@@ -439,7 +361,7 @@ export const COURSES_PT: Course[] = [
     expandedDesc: "Retopologia é aquela etapa que muitos artistas temem, mas que faz toda a diferença no resultado final. Nesse curso prático você vai aprender a construir topologia eficiente e limpa sem cometer os erros mais comuns de quem está começando. Vamos abordar como resolver áreas desafiadoras como as mãos, criar edge loops perfeitos para animação e manter a contagem de polígonos baixa sem abrir mão da qualidade.\n\nBônus exclusivo para alunos 🎁: Ao comprar este curso, você tem direito a 30% de desconto na Licença Perpétua do TopoGun 3.",
     image: "/images/course_retopologia_in_topoGun3.webp",
     level: "Intermediário",
-    lang: "EN",
+    lang: "EN (Legendas PT)",
     software: "TopoGun 3",
     duration: "3h",
     price: "$39",
@@ -452,66 +374,12 @@ export const COURSES_PT: Course[] = [
     checkout: "#"
   },
   {
-    title: "Design de Personagem 3D para Games: Feminino",
-    desc: "Um mergulho profundo no processo de criação de personagens femininos para jogos, da concepção ao render final.",
-    expandedDesc: "Este curso é para quem já tem conhecimentos em modelagem 3D e quer ir mais fundo no design e criação de personagens femininos para jogos. O foco não está em ensinar o básico de cada ferramenta, mas em mostrar o processo de pensamento, construção e desenvolvimento do personagem desde a concepção até o render final.",
-    image: "/images/course_3d_character_design_for_games_female.webp",
-    level: "Intermediário / Avançado",
-    lang: "PT",
-    software: "ZBrush, Topogun, Blender, Substance Painter, Houdini, Marmoset",
-    duration: "12h",
-    price: "$49",
-    learn: [
-      "Blockout inicial da silhueta",
-      "Modelagem e retopologia",
-      "Grooming e texturização",
-      "Renderização em tempo real"
-    ],
-    checkout: "#"
-  },
-  {
-    title: "Design de Personagem 3D para Games: Masculino",
-    desc: "Um mergulho profundo no processo de criação de personagens masculinos para jogos, da concepção ao render final.",
-    expandedDesc: "Este curso é para quem já tem conhecimentos em modelagem 3D e quer ir mais fundo no design e criação de personagens masculinos para jogos. Você vai acompanhar cada etapa do processo do Vinicius Cavalcanti: do bloqueio inicial da silhueta, passando por modelagem, retopologia, grooming e texturização, até a renderização em tempo real com qualidade de produção.",
-    image: "/images/course_3d_character_design_for_games_male.webp",
-    level: "Intermediário / Avançado",
-    lang: "PT",
-    software: "ZBrush, Topogun, Blender, Substance Painter, Houdini, Marmoset",
-    duration: "24h",
-    price: "$49",
-    learn: [
-      "Processo de pensamento de design",
-      "Desenvolvimento de personagem",
-      "Texturização avançada",
-      "Render de portfólio final"
-    ],
-    checkout: "#"
-  },
-  {
-    title: "Migrando pro Blender",
-    desc: "Você já domina um software 3D. Agora é hora de aprender o Blender do jeito certo.",
-    expandedDesc: "Se você já trabalha com Maya, 3ds Max, Cinema 4D ou qualquer outro software 3D e precisa migrar para o Blender, este curso foi feito pra você. Sem enrolação de curso básico, sem passo a passo cansativo para quem já cria em 3D. Em 47 aulas, você vai aprender tudo o que é necessário para trabalhar com o Blender em nível profissional.",
-    image: "/images/course_migrating_to_blender.webp",
-    level: "Intermediário / Avançado",
-    lang: "PT",
-    software: "Blender",
-    duration: "12h (47 aulas)",
-    price: "$49",
-    learn: [
-      "Diferenças e atalhos",
-      "Mentalidade do Blender",
-      "Fluxo de trabalho produtivo",
-      "Transição de nível profissional"
-    ],
-    checkout: "#"
-  },
-  {
     title: "Character Design: Baby Allosaurus",
     desc: "Do storytelling ao render final, um pipeline completo de personagem estilizado em 4 módulos.",
     expandedDesc: "Criar um personagem memorável começa muito antes de abrir o ZBrush. Nesse curso você vai aprender a construir um personagem estilizado do zero, passando por cada etapa do processo: do storytelling e design intencional até a composição final de cena e render de portfólio.",
     image: "/images/course_character_design_baby_allosaurus.webp",
     level: "Intermediário",
-    lang: "PT",
+    lang: "EN (Legendas PT)",
     software: "ZBrush, Blender",
     duration: "Em desenvolvimento",
     price: "$49",
@@ -522,6 +390,32 @@ export const COURSES_PT: Course[] = [
       "Render Final — Iluminação, Cena e Storytelling Visual"
     ],
     checkout: "#"
+  },
+  {
+    title: "Grooming para Personagens Estilizados - EN (Legendas PT)",
+    desc: "Aprenda a criar cabelos e pelos estilizados no Houdini, do zero ao resultado final digno de portfólio.",
+    expandedDesc: "Grooming é uma das habilidades mais valorizadas e menos ensinadas do pipeline de personagens 3D. Nesse curso, você vai aprender a criar cabelos e pelos estilizados com uma das ferramentas mais poderosas da indústria: o Houdini. Começando pelos fundamentos para que você não precise de nenhuma experiência prévia com o software, até a construção completa de um hair groom estilizado, cada aula foi pensada para te dar confiança e fluidez no processo.",
+    image: "/images/course_grooming_for_stylized_characters.webp",
+    level: "Intermediário",
+    lang: "EN (Legendas PT)",
+    software: "Houdini",
+    duration: "Em desenvolvimento",
+    price: "$49",
+    learn: [
+      "Introdução ao Houdini e ao ambiente de trabalho",
+      "Introdução ao Karma (render)",
+      "Importação e setup da geometria do personagem",
+      "Introdução ao HairGen",
+      "Blocking dos guias principais",
+      "Blocking dos guias laterais",
+      "Refinamento do primeiro blockout lateral",
+      "Blocking do lado esquerdo do cabelo",
+      "Introdução ao Groombear e blockout dos guias superiores",
+      "Ferramentas principais do Groombear e adição de volume aos guias",
+      "Blockout do cabelo traseiro"
+    ],
+    checkout: "#",
+    comingSoon: true
   }
 ];
 

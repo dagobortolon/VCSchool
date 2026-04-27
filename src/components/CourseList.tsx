@@ -107,6 +107,13 @@ export default function CourseList({ courses, t }: CourseListProps) {
                     e.currentTarget.nextElementSibling?.classList.remove('hidden');
                   }}
                 />
+                {course.comingSoon && (
+                  <div className="absolute right-0 top-0 z-10 h-24 w-24 overflow-hidden">
+                    <div className="absolute left-[-10px] top-[26px] w-[140px] rotate-45 bg-[#EF7722] py-1 text-center text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
+                      Em Breve
+                    </div>
+                  </div>
+                )}
                 <div className={`hidden h-full w-full ${i % 3 === 0 ? "bg-gradient-to-br from-[#EF7722] to-[#F9A335]" : i % 3 === 1 ? "bg-gradient-to-br from-[#0CA6DF] to-[#7ACEEE]" : "bg-gradient-to-br from-[#111111] to-[#7C877E]"}`} />
               </div>
               <div className="flex flex-col flex-grow p-5">

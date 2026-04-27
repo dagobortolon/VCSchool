@@ -10,6 +10,7 @@ export interface Course {
   price: string;
   learn: string[];
   checkout: string;
+  comingSoon?: boolean;
 }
 
 export interface Bundle {
