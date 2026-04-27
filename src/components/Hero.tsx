@@ -36,12 +36,12 @@ export default function Hero({ t }: HeroProps) {
           href="https://www.artstation.com/viniciuscavalcanti" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="relative block overflow-hidden rounded-[24px] shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+          className="relative block rounded-[30px] bg-white p-[15px] shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-black/5"
         >
           <img 
             src="/images/hero_image.webp" 
             alt="3D Character Presentation" 
-            className="w-full h-auto object-cover aspect-[4/3] sm:aspect-square md:aspect-[16/11]"
+            className="w-full h-auto object-cover aspect-[4/3] sm:aspect-square md:aspect-[16/11] rounded-[18px]"
             loading="eager"
             fetchPriority="high"
             onError={(e) => {

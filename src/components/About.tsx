@@ -12,11 +12,11 @@ interface AboutProps {
 export default function About({ t }: AboutProps) {
   return (
     <section className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center">
-      <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-6 shadow-xl relative h-[650px] w-full max-w-[480px] mx-auto md:mx-0">
+      <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[15px] shadow-xl relative h-[650px] w-full max-w-[480px] mx-auto md:mx-0">
         <img 
           src="/images/about_vini_photo.webp" 
           alt="Vini Cavalcanti" 
-          className="h-full w-full object-cover rounded-[24px]"
+          className="h-full w-full object-cover rounded-[28px]"
           loading="lazy"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
