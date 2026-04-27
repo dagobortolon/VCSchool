@@ -17,7 +17,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <img 
-              src="/images/logo.png" 
+              src="/images/vini_cavalcanti_3d_school_logo.png" 
               alt="Vini Cavalcanti School" 
               className="h-12 w-auto" 
             />

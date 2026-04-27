@@ -12,7 +12,7 @@ import MobileBottomBar from './components/MobileBottomBar';
 import { TRANSLATIONS, COURSES_EN, COURSES_PT, BUNDLES, FAQ_ITEMS, SOCIAL_LINKS } from './constants';
 
 export default function App() {
-  const [lang, setLang] = useState<'en' | 'pt'>('pt');
+  const [lang, setLang] = useState<'en' | 'pt'>('en');
   const t = TRANSLATIONS[lang];
 
   return (
