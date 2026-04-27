@@ -5,6 +5,7 @@ export const TRANSLATIONS = {
     nav: {
       courses: "Courses",
       mentorship: "Mentorship",
+      portfolio: "Portfolio",
       members: "Members Area"
     },
     hero: {
@@ -132,6 +133,7 @@ export const TRANSLATIONS = {
     nav: {
       courses: "Cursos",
       mentorship: "Mentoria",
+      portfolio: "Portfólio",
       members: "Área de Membros"
     },
     hero: {

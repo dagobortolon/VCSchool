@@ -8,6 +8,7 @@ interface NavbarProps {
   t: {
     courses: string;
     mentorship: string;
+    portfolio: string;
     members: string;
   };
 }
@@ -23,7 +24,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <img 
-              src="/images/logo_vini_cavalcanti_3D.svg" 
+              src="/images/logo_vini_cavalcanti_3D.webp" 
               alt="Vini Cavalcanti School" 
               className="h-12 w-auto" 
             />
@@ -34,6 +35,14 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
         <div className="hidden items-center gap-6 md:flex">
           <a className="text-sm font-medium text-black/70 hover:text-black transition-colors" href="#courses">{t.courses}</a>
           <a className="text-sm font-medium text-black/70 hover:text-black transition-colors" href="#mentorship">{t.mentorship}</a>
+          <a 
+            className="text-sm font-medium text-black/70 hover:text-black transition-colors" 
+            href="https://www.artstation.com/viniciuscavalcanti" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            {t.portfolio}
+          </a>
           <button 
             onClick={() => setLang(lang === 'en' ? 'pt' : 'en')}
             className="rounded-full border border-black/10 bg-white px-3 py-2 text-sm shadow-sm hover:bg-black/5 transition-colors cursor-pointer"
@@ -79,6 +88,15 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
                 className="text-lg font-medium text-black/80 hover:text-black"
               >
                 {t.mentorship}
+              </a>
+              <a 
+                href="https://www.artstation.com/viniciuscavalcanti" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={toggleMenu}
+                className="text-lg font-medium text-black/80 hover:text-black"
+              >
+                {t.portfolio}
               </a>
               <div className="flex pt-2">
                 <button 
