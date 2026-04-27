@@ -6,8 +6,10 @@ Coloque as imagens nesta pasta com os nomes exatos abaixo para que apareçam aut
 - `logo_vini_cavalcanti_3D.svg` (Logo da Escola)
 - `favicon_vini_cavalcanti.png` (Ícone do navegador)
 
-## Geral
-- `about-vini.webp` (Foto do Vini - usada no Hero, Sobre e Mentoria)
+## Seções
+- `hero_image.webp` (Imagem da Seção Hero - 16:11)
+- `about_vini_photo.webp` (Foto da Seção Sobre - 490x760)
+- `mentorship_image.webp` (Imagem da Seção Mentoria - 21:9)
 
 ## Cursos (Exemplos)
 - `course_retopologia_in_topoGun3.webp` (Miniatura do curso de Retopologia)
