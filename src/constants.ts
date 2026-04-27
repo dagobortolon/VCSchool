@@ -90,9 +90,9 @@ export const TRANSLATIONS = {
       title: "Artists already on their way.",
       subtitle: "From different skill levels and different parts of the world, using these courses to build real portfolios and take real steps into the industry.",
       items: [
-        { name: "Lucas M.", country: "Brazil", course: "Character Design", text: "The courses helped me organize my process better and significantly elevate the presentation of my projects." },
-        { name: "Marina S.", country: "USA", course: "Grooming", text: "The teaching is direct and the school's look-and-feel passes exactly the sense of curation I wanted to find." },
-        { name: "Caio R.", country: "Portugal", course: "Environment", text: "I liked it because I can understand the course quickly, see what I'm going to learn and buy without browsing through several pages." }
+        { name: "Bruno Martins", country: "", course: "3D Artist / Motion", text: "Vini's courses were essential in helping me switch to Blender, and I highly recommend them. I've always worked with Cinema 4D and Autodesk Maya and found it difficult to switch because Blender is quite different. However, thanks to the courses, I’m already using it in my pipeline for some projects, and soon I’ll be using it 100% of the time." },
+        { name: "João Emoroso", country: "", course: "3D Character Artist", text: "What I like most about Vinicius's teaching method is that, beyond using the pipelines of the biggest animation studios, he presents them in an uncomplicated way — he teaches in such a manner that even the most professional processes become logical and make sense within the workflow." },
+        { name: "João Gilberto", country: "", course: "3D Artist", text: "Taking classes with Vini has been amazing. I was very afraid of not being good enough to keep up with his classes, but his teaching and explanations are very precise and make everything clear. He always answers us when we have questions. Today, I believe I can become a good Character Artist soon." }
       ]
     },
     faq: {
@@ -216,9 +216,9 @@ export const TRANSLATIONS = {
       title: "Artistas que já estão no caminho.",
       subtitle: "De diferentes níveis e de diferentes partes do mundo, usando esses cursos para construir portfólios reais e dar os próximos passos na indústria.",
       items: [
-        { name: "Lucas M.", country: "Brasil", course: "Character Design", text: "Os cursos me ajudaram a organizar melhor meu processo e elevar bastante a apresentação dos meus projetos." },
-        { name: "Marina S.", country: "EUA", course: "Grooming", text: "A didática é direta e o visual da escola passa exatamente a sensação de curadoria que eu queria encontrar." },
-        { name: "Caio R.", country: "Portugal", course: "Environment", text: "Gostei porque consigo entender rápido o curso, ver o que vou aprender e comprar sem ficar navegando em várias páginas." }
+        { name: "Bruno Martins", country: "", course: "3D Artist / Motion", text: "Os cursos do Vini foram essenciais para me ajudar a migrar para o Blender, e eu recomendo muito. Sempre trabalhei com Cinema 4D e Autodesk Maya e achei difícil a transição, porque o Blender é bem diferente. No entanto, graças aos cursos, já estou usando ele no meu pipeline em alguns projetos e, em breve, estarei utilizando 100% do tempo." },
+        { name: "João Emoroso", country: "", course: "3D Character Artist", text: "O que eu mais gosto na metodologia de ensino do Vinicius é que, além de utilizar os pipelines dos maiores estúdios de animação, ele apresenta isso de forma descomplicada — ele ensina de um jeito em que até os processos mais profissionais se tornam lógicos e fazem sentido dentro do workflow." },
+        { name: "João Gilberto", country: "", course: "3D Artist", text: "Fazer aulas com o Vini tem sido incrível. Eu tinha muito medo de não ser bom o suficiente para acompanhar as aulas, mas a didática e as explicações dele são muito precisas e tornam tudo claro. Ele sempre responde quando temos dúvidas. Hoje, eu acredito que posso me tornar um bom Character Artist em breve." }
       ]
     },
     faq: {

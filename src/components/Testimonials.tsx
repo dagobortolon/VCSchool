@@ -26,7 +26,7 @@ export default function Testimonials({ t }: TestimonialsProps) {
             <div className="mt-8 pt-6 border-t border-black/5">
               <div className="font-semibold text-black">{item.name}</div>
               <div className="text-xs text-black/40 mt-1 uppercase tracking-wider">
-                {item.course} • {item.country}
+                {item.course}{item.country ? ` • ${item.country}` : ''}
               </div>
             </div>
           </div>
