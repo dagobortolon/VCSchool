@@ -101,6 +101,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   src={course.image} 
                   alt={course.title} 
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.nextElementSibling?.classList.remove('hidden');

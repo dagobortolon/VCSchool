@@ -54,6 +54,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                 src="/images/mentorship_image.webp" 
                 alt={t.title} 
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>

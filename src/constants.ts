@@ -11,8 +11,7 @@ export const TRANSLATIONS = {
       badge: "Vini Cavalcanti School",
       headline: "Learn to create memorable 3D characters for games.",
       subheadline: "A school dedicated to 3D character art for games, taught by someone who lives this process every day inside real studios.",
-      button: "Explore Courses",
-      videoCaption: "See the process in action."
+      button: "Explore Courses"
     },
     about: {
       badge: "The School",
@@ -137,8 +136,7 @@ export const TRANSLATIONS = {
       badge: "Vini Cavalcanti School",
       headline: "Aprenda a criar personagens 3D memoráveis para jogos.",
       subheadline: "Uma escola dedicada ao universo de personagens 3D para games, com um professor que vive esse processo todo dia dentro de estúdios reais.",
-      button: "Explorar Cursos",
-      videoCaption: "Veja o processo na prática."
+      button: "Explorar Cursos"
     },
     about: {
       badge: "A Escola",

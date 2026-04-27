@@ -17,6 +17,7 @@ export default function About({ t }: AboutProps) {
           src="/images/about_vini_photo.webp" 
           alt="Vini Cavalcanti" 
           className="h-full w-full object-cover rounded-[20px]"
+          loading="lazy"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
             e.currentTarget.nextElementSibling?.classList.remove('hidden');
