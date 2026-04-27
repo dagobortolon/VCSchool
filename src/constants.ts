@@ -58,6 +58,7 @@ export const TRANSLATIONS = {
       oneOnOne: "One-on-One",
       aboutTitle: "About the mentorship",
       scheduleTitle: "Mentorship Schedule",
+      checkout: "https://pay.hotmart.com/D105581670W",
       modules: [
         {
           title: "Module 1: Sculpture & Character Foundation (ZBrush & Blender)",
@@ -184,6 +185,7 @@ export const TRANSLATIONS = {
       oneOnOne: "Individual",
       aboutTitle: "Sobre a mentoria",
       scheduleTitle: "Grade da Mentoria",
+      checkout: "https://pay.hotmart.com/D105581670W",
       modules: [
         {
           title: "Módulo 1: Fundação de Escultura e Personagem (ZBrush & Blender)",
@@ -272,7 +274,7 @@ export const COURSES_EN: Course[] = [
       "Stylized sculpting",
       "Final refinement"
     ],
-    checkout: "#"
+    checkout: "https://pay.hotmart.com/J105527673H"
   },
   {
     title: "Retopology in TopoGun 3",
@@ -290,7 +292,7 @@ export const COURSES_EN: Course[] = [
       "Edge loops for animation",
       "Poly count optimization"
     ],
-    checkout: "#"
+    checkout: "https://pay.hotmart.com/S105526894H"
   },
   {
     title: "Character Design: Baby Allosaurus",
@@ -330,7 +332,7 @@ export const COURSES_PT: Course[] = [
       "Escultura estilizada",
       "Refinamento final"
     ],
-    checkout: "#"
+    checkout: "https://pay.hotmart.com/J105527673H"
   },
   {
     title: "Retopologia no TopoGun 3",
@@ -348,7 +350,7 @@ export const COURSES_PT: Course[] = [
       "Edge loops para animação",
       "Otimização de polígonos"
     ],
-    checkout: "#"
+    checkout: "https://pay.hotmart.com/S105526894H"
   },
   {
     title: "Character Design: Baby Allosaurus",

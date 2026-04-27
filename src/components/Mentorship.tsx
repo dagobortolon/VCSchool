@@ -16,6 +16,7 @@ interface MentorshipProps {
     oneOnOne: string;
     aboutTitle: string;
     scheduleTitle: string;
+    checkout: string;
     modules: Array<{
       title: string;
       weeks: Array<{ label: string; text: string }>;
@@ -89,7 +90,9 @@ export default function Mentorship({ t }: MentorshipProps) {
 
                 <div className="flex items-center gap-5">
                   <a 
-                    href="#"
+                    href={t.checkout}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
                     className="rounded-full bg-[#EF7722] px-8 py-3 text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
                   >
@@ -140,7 +143,12 @@ export default function Mentorship({ t }: MentorshipProps) {
               </div>
               
               <div className="mt-12 pt-8 border-t border-black/5">
-                <a href="#" className="block w-full rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95">
+                <a 
+                  href={t.checkout}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95"
+                >
                   {t.button}
                 </a>
               </div>
