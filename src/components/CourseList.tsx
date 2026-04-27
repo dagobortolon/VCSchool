@@ -82,7 +82,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-5 items-start lg:grid-cols-2 xl:grid-cols-3">
         {visibleCourses.map((course, i) => (
           <details 
             key={course.title} 
@@ -129,7 +129,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                     <a 
                       href={course.checkout}
                       onClick={(e) => e.stopPropagation()}
-                      className="rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95"
+                      className="rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
                     >
                       {t.buy}
                     </a>

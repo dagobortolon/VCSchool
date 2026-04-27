@@ -32,7 +32,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-5 items-start md:grid-cols-2">
           {bundles.map((bundle, i) => (
             <details 
               key={bundle.title} 
@@ -80,7 +80,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                       <a 
                         href={bundle.checkout}
                         onClick={(e) => e.stopPropagation()}
-                        className={`rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 ${i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]"}`}
+                        className={`rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 group-open:hidden ${i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]"}`}
                       >
                         {t.buy}
                       </a>

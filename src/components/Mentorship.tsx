@@ -90,7 +90,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                   <a 
                     href="#"
                     onClick={(e) => e.stopPropagation()}
-                    className="rounded-full bg-[#EF7722] px-8 py-3 text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95"
+                    className="rounded-full bg-[#EF7722] px-8 py-3 text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
                   >
                     {t.button}
                   </a>
