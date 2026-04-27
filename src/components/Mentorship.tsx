@@ -9,6 +9,13 @@ interface MentorshipProps {
     body: string;
     button: string;
     price: string;
+    investmentLabel: string;
+    details: string;
+    close: string;
+    limitedSpots: string;
+    oneOnOne: string;
+    aboutTitle: string;
+    scheduleTitle: string;
     modules: Array<{
       title: string;
       weeks: Array<{ label: string; text: string }>;
@@ -18,21 +25,6 @@ interface MentorshipProps {
 
 export default function Mentorship({ t }: MentorshipProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
-    checkDesktop();
-    window.addEventListener('resize', checkDesktop);
-    return () => window.removeEventListener('resize', checkDesktop);
-  }, []);
-
-  const toggle = (e: React.MouseEvent) => {
-    if (isDesktop) {
-      e.preventDefault();
-      setIsExpanded(!isExpanded);
-    }
-  };
 
   return (
     <section id="mentorship" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
@@ -47,11 +39,14 @@ export default function Mentorship({ t }: MentorshipProps) {
 
       <div className="mx-auto max-w-4xl">
         <details 
-          open={isDesktop ? isExpanded : undefined}
+          open={isExpanded}
           className="group flex flex-col overflow-hidden rounded-[32px] border border-black/5 bg-white shadow-sm transition-all open:shadow-xl"
         >
           <summary 
-            onClick={toggle}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsExpanded(!isExpanded);
+            }}
             className="flex flex-col list-none cursor-pointer h-full"
           >
             <div className="relative aspect-[21/9] overflow-hidden">
@@ -66,10 +61,10 @@ export default function Mentorship({ t }: MentorshipProps) {
             <div className="flex flex-col flex-grow p-8 sm:p-10">
               <div className="flex flex-wrap gap-2 text-xs">
                 <span className="rounded-full bg-[#0CA6DF]/10 px-3 py-1.5 text-[#0CA6DF] font-bold uppercase tracking-wider">
-                  Limited Spots
+                  {t.limitedSpots}
                 </span>
                 <span className="rounded-full bg-black/5 px-3 py-1.5 text-black/60 font-bold uppercase tracking-wider">
-                  One-on-One
+                  {t.oneOnOne}
                 </span>
               </div>
               
@@ -77,19 +72,34 @@ export default function Mentorship({ t }: MentorshipProps) {
                 {t.title}
               </h3>
               
-              <p className="mt-4 text-lg leading-relaxed text-black/60 line-clamp-2">
+              <p className="mt-4 text-lg leading-relaxed text-black/60 line-clamp-3 min-h-[5rem]">
                 {t.body}
               </p>
               
-              <div className="mt-10 pt-8 border-t border-black/5 flex items-center justify-between gap-3">
-                <div className="text-3xl font-bold text-[#EF7722]">
-                  {t.price}
+              <div className="mt-10 flex items-center justify-between gap-6 border-t border-black/5 pt-8">
+                <div className="flex items-center">
+                  <div className="rounded-full border border-black/10 bg-white px-8 py-3 text-base font-semibold shadow-sm transition group-open:hidden hover:bg-black hover:text-white whitespace-nowrap">
+                    {t.details}
+                  </div>
+                  <div className="hidden rounded-full border border-black/10 bg-black px-8 py-3 text-base font-semibold text-white shadow-sm group-open:block whitespace-nowrap">
+                    {t.close}
+                  </div>
                 </div>
-                <div className="rounded-full border border-black/10 bg-white px-8 py-3 text-base font-semibold shadow-sm transition group-open:hidden hover:bg-black hover:text-white">
-                  Ver +
-                </div>
-                <div className="hidden rounded-full border border-black/10 bg-black px-8 py-3 text-base font-semibold text-white shadow-sm group-open:block">
-                  Ver -
+
+                <div className="flex items-center gap-5">
+                  <a 
+                    href="#"
+                    onClick={(e) => e.stopPropagation()}
+                    className="rounded-full bg-[#EF7722] px-8 py-3 text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95"
+                  >
+                    {t.button}
+                  </a>
+                  <div className="flex flex-col items-end">
+                    <span className="text-xs font-bold uppercase tracking-widest text-black/30 leading-none mb-1">{t.investmentLabel}</span>
+                    <div className="text-3xl font-bold text-[#EF7722]">
+                      {t.price}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,14 +108,14 @@ export default function Mentorship({ t }: MentorshipProps) {
           <div className="px-8 pb-8 sm:px-10 sm:pb-10">
             <div className="rounded-[24px] bg-[#FAFAF8] p-8 ring-1 ring-black/5">
               <div className="mb-10">
-                <div className="text-xs font-bold uppercase tracking-widest text-[#0CA6DF] mb-4">Sobre a mentoria</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-[#0CA6DF] mb-4">{t.aboutTitle}</div>
                 <p className="text-lg text-black/70 leading-relaxed whitespace-pre-wrap italic">
                   {t.body}
                 </p>
               </div>
 
               <div className="space-y-12 mb-10">
-                <div className="text-xs font-bold uppercase tracking-widest text-[#0CA6DF]">Grade da Mentoria</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-[#0CA6DF]">{t.scheduleTitle}</div>
                 
                 {t.modules.map((module) => (
                   <div key={module.title} className="space-y-6">

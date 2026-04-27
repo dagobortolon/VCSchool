@@ -4,6 +4,7 @@ interface FAQProps {
   t: {
     badge: string;
     title: string;
+    subtitle: string;
   };
   items: Array<{ q: string; a: string }>;
 }
@@ -16,6 +17,7 @@ export default function FAQ({ t, items }: FAQProps) {
           {t.badge}
         </div>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h2>
+        <p className="mt-4 text-lg text-black/60 max-w-2xl mx-auto">{t.subtitle}</p>
       </div>
       <div className="space-y-4">
         {items.map((item, i) => (

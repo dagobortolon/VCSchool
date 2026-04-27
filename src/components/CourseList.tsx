@@ -11,19 +11,28 @@ interface CourseListProps {
       intermediate: string;
       advanced: string;
     };
+    filterValues: {
+      all: string;
+      beginner: string;
+      intermediate: string;
+      advanced: string;
+    };
     duration: string;
     software: string;
     details: string;
     close: string;
     buy: string;
     loadMore: string;
+    priceLabel: string;
+    lessonsTitle: string;
   };
 }
 
 export default function CourseList({ courses, t }: CourseListProps) {
-  const [isMainExpanded, setIsMainExpanded] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [isMobileExpanded, setIsMobileExpanded] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   useEffect(() => {
     const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
@@ -32,22 +41,19 @@ export default function CourseList({ courses, t }: CourseListProps) {
     return () => window.removeEventListener('resize', checkDesktop);
   }, []);
 
-  const toggleMain = (e: React.MouseEvent) => {
-    if (isDesktop) {
-      e.preventDefault();
-      setIsMainExpanded(!isMainExpanded);
-    }
-  };
-
-  const filteredCourses = activeFilter === 'All' 
+  const filteredCourses = activeFilter === t.filterValues.all 
     ? courses 
     : courses.filter(c => c.level.includes(activeFilter) || c.lang.includes(activeFilter));
 
+  const visibleCourses = isDesktop || isMobileExpanded 
+    ? filteredCourses 
+    : filteredCourses.slice(0, 3);
+
   const filterOptions = [
-    { label: t.filters.all, value: 'All' },
-    { label: t.filters.beginner, value: 'Beginner' },
-    { label: t.filters.intermediate, value: 'Intermediate' },
-    { label: t.filters.advanced, value: 'Advanced' },
+    { label: t.filters.all, value: t.filterValues.all },
+    { label: t.filters.beginner, value: t.filterValues.beginner },
+    { label: t.filters.intermediate, value: t.filterValues.intermediate },
+    { label: t.filters.advanced, value: t.filterValues.advanced },
     { label: 'PT', value: 'PT' },
     { label: 'EN', value: 'EN' }
   ];
@@ -63,7 +69,10 @@ export default function CourseList({ courses, t }: CourseListProps) {
             {filterOptions.map((opt) => (
               <button 
                 key={opt.value} 
-                onClick={() => setActiveFilter(opt.value)}
+                onClick={() => {
+                  setActiveFilter(opt.value);
+                  setIsMobileExpanded(false); // Reset expansion when filtering
+                }}
                 className={`whitespace-nowrap rounded-full border px-4 py-2 shadow-sm transition-all ${activeFilter === opt.value ? 'bg-black text-white border-black' : 'bg-white border-black/10'}`}
               >
                 {opt.label}
@@ -74,14 +83,17 @@ export default function CourseList({ courses, t }: CourseListProps) {
       </div>
 
       <div className="mt-8 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
-        {filteredCourses.map((course, i) => (
+        {visibleCourses.map((course, i) => (
           <details 
             key={course.title} 
-            open={isDesktop ? isMainExpanded : undefined}
+            open={expandedId === course.title}
             className="group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm transition open:shadow-md"
           >
             <summary 
-              onClick={toggleMain}
+              onClick={(e) => {
+                e.preventDefault();
+                setExpandedId(expandedId === course.title ? null : course.title);
+              }}
               className="flex flex-col list-none cursor-pointer h-full"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
@@ -102,14 +114,29 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   <span className="rounded-full bg-[#F5F5F2] px-2.5 py-1 text-black/60 font-medium">{course.lang}</span>
                 </div>
                 <h3 className="mt-4 text-xl font-semibold tracking-tight leading-tight">{course.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-black/60 line-clamp-2">{course.desc}</p>
-                <div className="mt-auto pt-4 flex items-center justify-between gap-3">
-                  <div className="text-xl font-semibold text-[#EF7722]">{course.price}</div>
-                  <div className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm shadow-sm transition group-open:hidden hover:bg-black/5">
-                    {t.details} +
+                <p className="mt-2 text-sm leading-relaxed text-black/60 line-clamp-3 min-h-[4.5rem]">{course.desc}</p>
+                <div className="mt-auto flex items-center justify-between gap-3 border-t border-black/5 pt-5">
+                  <div className="flex items-center">
+                    <div className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-medium shadow-sm transition group-open:hidden hover:bg-black hover:text-white whitespace-nowrap">
+                      {t.details}
+                    </div>
+                    <div className="hidden rounded-full border border-black/10 bg-[#F5F5F2] px-4 py-2 text-xs font-medium shadow-sm group-open:block whitespace-nowrap">
+                      {t.close}
+                    </div>
                   </div>
-                  <div className="hidden rounded-full border border-black/10 bg-[#F5F5F2] px-4 py-2 text-sm shadow-sm group-open:block">
-                    {t.close} -
+
+                  <div className="flex items-center gap-3">
+                    <a 
+                      href={course.checkout}
+                      onClick={(e) => e.stopPropagation()}
+                      className="rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95"
+                    >
+                      {t.buy}
+                    </a>
+                    <div className="flex flex-col items-end">
+                      <span className="text-[10px] uppercase tracking-wider text-black/30 font-bold leading-none mb-1">{t.priceLabel}</span>
+                      <div className="text-xl font-bold text-[#EF7722]">{course.price}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -137,7 +164,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                 )}
 
                 <div className="mt-4">
-                  <div className="text-xs font-bold uppercase tracking-widest text-[#EF7722]">Lessons included</div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-[#EF7722]">{t.lessonsTitle}</div>
                   <ul className="mt-4 space-y-3 text-sm text-black/75">
                     {course.learn.map((item) => (
                       <li key={item} className="flex gap-3">
@@ -158,11 +185,16 @@ export default function CourseList({ courses, t }: CourseListProps) {
         ))}
       </div>
 
-      <div className="mt-12 flex justify-center">
-        <button className="rounded-full border border-black/10 bg-white px-8 py-3 text-sm font-semibold text-black/70 shadow-sm transition-all hover:bg-black hover:text-white">
-          {t.loadMore}
-        </button>
-      </div>
+      {!isDesktop && filteredCourses.length > 3 && (
+        <div className="mt-12 flex justify-center">
+          <button 
+            onClick={() => setIsMobileExpanded(!isMobileExpanded)}
+            className="rounded-full border border-black/10 bg-white px-8 py-3 text-sm font-semibold text-black/70 shadow-sm transition-all hover:bg-black hover:text-white"
+          >
+            {isMobileExpanded ? t.close : t.loadMore}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

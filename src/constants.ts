@@ -28,12 +28,20 @@ export const TRANSLATIONS = {
         intermediate: "Intermediate",
         advanced: "Advanced"
       },
+      filterValues: {
+        all: "All",
+        beginner: "Beginner",
+        intermediate: "Intermediate",
+        advanced: "Advanced"
+      },
       duration: "Duration",
       software: "Software",
-      details: "See details",
-      close: "Close details",
+      details: "See +",
+      close: "See -",
       buy: "Get this course",
-      loadMore: "Load more courses"
+      loadMore: "Load more courses",
+      priceLabel: "Price",
+      lessonsTitle: "Lessons included"
     },
     mentorship: {
       sectionTitle: "One-on-One Mentorship",
@@ -43,6 +51,13 @@ export const TRANSLATIONS = {
       body: "10 weeks of direct, one-on-one guidance with a Senior Character Artist who works in the industry every day. You'll build a complete character from the very first blockout to a portfolio-ready final piece, with feedback and support at every stage of the process.\n\nThis is not a course. It's a mentorship.",
       button: "Sign up now!",
       price: "$600",
+      investmentLabel: "Investment",
+      details: "See +",
+      close: "See -",
+      limitedSpots: "Limited Spots",
+      oneOnOne: "One-on-One",
+      aboutTitle: "About the mentorship",
+      scheduleTitle: "Mentorship Schedule",
       modules: [
         {
           title: "Module 1: Sculpture & Character Foundation (ZBrush & Blender)",
@@ -73,16 +88,28 @@ export const TRANSLATIONS = {
     },
     testimonials: {
       title: "Artists already on their way.",
-      subtitle: "From different skill levels and different parts of the world, using these courses to build real portfolios and take real steps into the industry."
+      subtitle: "From different skill levels and different parts of the world, using these courses to build real portfolios and take real steps into the industry.",
+      items: [
+        { name: "Lucas M.", country: "Brazil", course: "Character Design", text: "The courses helped me organize my process better and significantly elevate the presentation of my projects." },
+        { name: "Marina S.", country: "USA", course: "Grooming", text: "The teaching is direct and the school's look-and-feel passes exactly the sense of curation I wanted to find." },
+        { name: "Caio R.", country: "Portugal", course: "Environment", text: "I liked it because I can understand the course quickly, see what I'm going to learn and buy without browsing through several pages." }
+      ]
     },
     faq: {
+      badge: "FAQ",
       title: "Frequently asked questions",
       subtitle: "If you still have questions, they're probably answered right here."
     },
     bundles: {
       badge: "Bundles",
       title: "Combos designed to speed up your choice",
-      subtitle: "A more organized path for those who want to buy with more clarity and make better use of content progression."
+      subtitle: "A more organized path for those who want to buy with more clarity and make better use of content progression.",
+      buy: "Get this bundle",
+      details: "See +",
+      close: "See -",
+      priceLabel: "Price",
+      includedTitle: "Courses included",
+      comboLabel: "Combo"
     },
     cta: {
       headline: "Ready to get started?",
@@ -92,6 +119,7 @@ export const TRANSLATIONS = {
     },
     footer: {
       rights: "© 2026 Vini Cavalcante School",
+      tagline: "Building Digital Legacies through 3D Art",
       links: ["Courses", "Mentorship", "FAQ"]
     },
     sticky: {
@@ -126,12 +154,20 @@ export const TRANSLATIONS = {
         intermediate: "Intermediário",
         advanced: "Avançado"
       },
+      filterValues: {
+        all: "All",
+        beginner: "Iniciante",
+        intermediate: "Intermediário",
+        advanced: "Avançado"
+      },
       duration: "Duração",
       software: "Software",
-      details: "Ver detalhes",
-      close: "Fechar detalhes",
+      details: "Ver +",
+      close: "Ver -",
       buy: "Comprar curso",
-      loadMore: "Ver mais cursos"
+      loadMore: "Ver mais cursos",
+      priceLabel: "Preço",
+      lessonsTitle: "Aulas inclusas"
     },
     mentorship: {
       sectionTitle: "Mentoria Individual",
@@ -141,6 +177,13 @@ export const TRANSLATIONS = {
       body: "10 semanas de acompanhamento direto com um Senior Character Artist que trabalha na indústria todos os dias. Você vai construir um personagem completo, do primeiro blockout até a peça final pronta para portfólio, com feedback e suporte em cada etapa do processo.\n\nIsso não é um curso. É uma mentoria.",
       button: "Inscreva-se agora!",
       price: "$600",
+      investmentLabel: "Investimento",
+      details: "Ver +",
+      close: "Ver -",
+      limitedSpots: "Vagas Limitadas",
+      oneOnOne: "Individual",
+      aboutTitle: "Sobre a mentoria",
+      scheduleTitle: "Grade da Mentoria",
       modules: [
         {
           title: "Módulo 1: Fundação de Escultura e Personagem (ZBrush & Blender)",
@@ -171,16 +214,28 @@ export const TRANSLATIONS = {
     },
     testimonials: {
       title: "Artistas que já estão no caminho.",
-      subtitle: "De diferentes níveis e de diferentes partes do mundo, usando esses cursos para construir portfólios reais e dar os próximos passos na indústria."
+      subtitle: "De diferentes níveis e de diferentes partes do mundo, usando esses cursos para construir portfólios reais e dar os próximos passos na indústria.",
+      items: [
+        { name: "Lucas M.", country: "Brasil", course: "Character Design", text: "Os cursos me ajudaram a organizar melhor meu processo e elevar bastante a apresentação dos meus projetos." },
+        { name: "Marina S.", country: "EUA", course: "Grooming", text: "A didática é direta e o visual da escola passa exatamente a sensação de curadoria que eu queria encontrar." },
+        { name: "Caio R.", country: "Portugal", course: "Environment", text: "Gostei porque consigo entender rápido o curso, ver o que vou aprender e comprar sem ficar navegando em várias páginas." }
+      ]
     },
     faq: {
+      badge: "Dúvidas",
       title: "Perguntas frequentes",
       subtitle: "Se ainda ficou alguma dúvida, é bem provável que ela esteja aqui."
     },
     bundles: {
       badge: "Combos",
       title: "Combos pensados para acelerar a escolha",
-      subtitle: "Trilha mais organizada para quem quer comprar com mais clareza e aproveitar melhor a progressão dos conteúdos."
+      subtitle: "Trilha mais organizada para quem quer comprar com mais clareza e aproveitar melhor a progressão dos conteúdos.",
+      buy: "Comprar combo",
+      details: "Ver +",
+      close: "Ver -",
+      priceLabel: "Preço",
+      includedTitle: "Cursos inclusos",
+      comboLabel: "Combo"
     },
     cta: {
       headline: "Pronto para começar?",
@@ -190,6 +245,7 @@ export const TRANSLATIONS = {
     },
     footer: {
       rights: "© 2026 Vini Cavalcante School",
+      tagline: "Construindo Legados Digitais através da Arte 3D",
       links: ["Cursos", "Mentoria", "FAQ"]
     },
     sticky: {

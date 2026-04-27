@@ -8,7 +8,6 @@ import Mentorship from './components/Mentorship';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import MobileBottomBar from './components/MobileBottomBar';
 import { TRANSLATIONS, COURSES_EN, COURSES_PT, BUNDLES, FAQ_ITEMS, SOCIAL_LINKS } from './constants';
 
 export default function App() {
@@ -16,7 +15,7 @@ export default function App() {
   const t = TRANSLATIONS[lang];
 
   return (
-    <div className="min-h-screen bg-[#FCFBF8] pb-24 text-[#060606] md:pb-0 selection:bg-[#EF7722]/10 selection:text-[#EF7722]">
+    <div className="min-h-screen bg-[#FCFBF8] text-[#060606] selection:bg-[#EF7722]/10 selection:text-[#EF7722]">
       <Navbar lang={lang} setLang={setLang} t={t.nav} />
       
       <main>
@@ -33,7 +32,6 @@ export default function App() {
       </main>
 
       <Footer t={t.footer} socialLinks={SOCIAL_LINKS} />
-      <MobileBottomBar t={t.sticky} />
     </div>
   );
 }

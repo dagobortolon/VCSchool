@@ -5,12 +5,9 @@ import { Instagram, Linkedin, Palette, ShoppingBag, Video } from 'lucide-react';
 interface FooterProps {
   socialLinks: SocialLink[];
   t: {
-    copy: string;
-    links: {
-      courses: string;
-      mentorship: string;
-      faq: string;
-    };
+    rights: string;
+    tagline: string;
+    links: string[];
   };
 }
 
@@ -34,40 +31,40 @@ const getIcon = (name: string) => {
 export default function Footer({ socialLinks, t }: FooterProps) {
   return (
     <footer className="mx-auto max-w-7xl px-4 py-16 text-sm text-black/50 sm:px-6 lg:px-8">
-      <div className="border-t border-black/5 pt-10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          <div className="flex flex-col gap-4">
-            <img 
-              src="/images/logo_vini_cavalcanti_3D.svg" 
-              alt="Vini Cavalcanti School" 
-              className="h-10 w-auto opacity-40 grayscale" 
-            />
-            <div className="text-left">{t.copy}</div>
-          </div>
-          
-          <div className="flex items-center gap-6 text-black/65">
-            {socialLinks.map((item) => (
-              <a 
-                key={item.name} 
-                href={item.href} 
-                aria-label={item.name} 
-                className="transition-all hover:text-[#0CA6DF] hover:scale-110"
-                title={item.name}
-              >
-                {getIcon(item.name)}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-x-8 gap-y-2">
-            <a href="#courses" className="hover:text-black font-medium">{t.links.courses}</a>
-            <a href="#mentorship" className="hover:text-black font-medium">{t.links.mentorship}</a>
-            <a href="#faq" className="hover:text-black font-medium">{t.links.faq}</a>
-          </div>
-        </div>
+      <div className="border-t border-black/5 pt-16 flex flex-col items-center text-center">
+        <img 
+          src="/images/logo_vini_cavalcanti_3D.svg" 
+          alt="Vini Cavalcanti School" 
+          className="h-14 w-auto mb-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500" 
+        />
         
-        <div className="mt-10 pt-6 border-t border-black/[0.03] text-[10px] uppercase tracking-widest text-black/20 text-center">
-          Building Digital Legacies through 3D Art
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 text-black/80 font-medium">
+          <a href="#courses" className="hover:text-[#EF7722] transition-colors">{t.links[0]}</a>
+          <a href="#mentorship" className="hover:text-[#EF7722] transition-colors">{t.links[1]}</a>
+          <a href="#faq" className="hover:text-[#EF7722] transition-colors">{t.links[2]}</a>
+        </div>
+
+        <div className="flex items-center gap-8 mb-12 text-black/40">
+          {socialLinks.map((item) => (
+            <a 
+              key={item.name} 
+              href={item.href} 
+              aria-label={item.name} 
+              className="transition-all hover:text-[#0CA6DF] hover:scale-110"
+              title={item.name}
+            >
+              {getIcon(item.name)}
+            </a>
+          ))}
+        </div>
+
+        <div className="space-y-4">
+          <div className="text-[11px] uppercase tracking-[0.2em] text-black/30">
+            {t.tagline}
+          </div>
+          <div className="text-[10px] text-black/20">
+            {t.rights}
+          </div>
         </div>
       </div>
     </footer>
