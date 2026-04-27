@@ -17,7 +17,7 @@ export const TRANSLATIONS = {
     about: {
       badge: "The School",
       title: "Learn from someone who's inside the industry, not just talking about it.",
-      body: "Hi, I'm Vini Cavalcanti. I'm a Senior 3D Character Artist with 10+ years of experience in the games and entertainment industry, focused on visual development and stylized characters. I'm currently part of the team at E-Line Media, working on the game Endstar, and throughout my career I've contributed to productions like the animated series The Wingfeather Saga (Angel Studios) and games like Wonderbox and Dice Dreams at PUGA Studios.\n\nI'm a Master's candidate in Creative Industries and a Game Art Specialist. Not because I needed a degree to work in the field, but because I believe deeply understanding what we do makes us more complete artists. More than creating, I've always loved teaching. I've mentored students who now work in the industry, and I know exactly which challenges come up along the way because I've been through them too. Vini Cavalcante School exists to be the shortcut I wish I'd had: a place where you learn the real process, guided by someone who lives it every single day.",
+      body: "Hi, I'm Vini Cavalcanti. I'm a Senior 3D Character Artist with 10+ years of experience in the games and entertainment industry, focused on visual development and stylized characters. I'm currently part of the team at E-Line Media, working on the game Endstar, and throughout my career I've contributed to productions like the animated series The Wingfeather Saga (Angel Studios) and games like Wonderbox and Dice Dreams at PUGA Studios.\n\nI'm a Master's M.A. Cand. in Creative Industries and a Game Art Specialist (PG Dip). More than creating, I've always loved teaching. I've mentored students who now work in the industry, and I know exactly which challenges come up along the way because I've been through them too. Vini Cavalcanti School exists to be the shortcut I wish I'd had: a place where you learn the real process, guided by someone who lives it every single day.",
       tags: ["Senior Artist", "10+ years exp", "Industry active"]
     },
     courses: {
@@ -45,7 +45,7 @@ export const TRANSLATIONS = {
       comingSoon: "Coming Soon"
     },
     mentorship: {
-      sectionTitle: "One-on-One Mentorship",
+      sectionTitle: "Mentorship Program",
       badge: "Mentorship",
       label: "For those who want to go further",
       title: "Vini Cavalcanti Mentorship Program",
@@ -93,7 +93,7 @@ export const TRANSLATIONS = {
       subtitle: "From different skill levels and different parts of the world, using these courses to build real portfolios and take real steps into the industry.",
       items: [
         { name: "Bruno Martins", country: "", course: "3D Artist / Motion", text: "Vini's courses were essential in helping me switch to Blender, and I highly recommend them. I've always worked with Cinema 4D and Autodesk Maya and found it difficult to switch because Blender is quite different. However, thanks to the courses, I’m already using it in my pipeline for some projects, and soon I’ll be using it 100% of the time." },
-        { name: "João Emoroso", country: "", course: "3D Character Artist", text: "What I like most about Vini teaching method is that, beyond using the pipelines of the biggest animation studios, he presents them in an uncomplicated way — he teaches in such a manner that even the most professional processes become logical and make sense within the workflow." },
+        { name: "João Emeroso", country: "", course: "3D Character Artist", text: "What I like most about Vini teaching method is that, beyond using the pipelines of the biggest animation studios, he presents them in an uncomplicated way — he teaches in such a manner that even the most professional processes become logical and make sense within the workflow." },
         { name: "João Gilberto", country: "", course: "3D Artist", text: "Taking classes with Vini has been amazing. I was very afraid of not being good enough to keep up with his classes, but his teaching and explanations are very precise and make everything clear. He always answers us when we have questions. Today, I believe I can become a good Character Artist soon." }
       ]
     },
@@ -145,7 +145,7 @@ export const TRANSLATIONS = {
     about: {
       badge: "A Escola",
       title: "Aprenda com quem está dentro da indústria, não só falando sobre ela.",
-      body: "Olá, eu sou o Vini Cavalcanti. Sou Senior 3D Character Artist com mais de 10 anos de experiência na indústria de games e entretenimento, especializado em desenvolvimento visual e personagens estilizados. Atualmente faço parte do time da E-Line Media, trabalhando no game Endstar, e ao longo da minha carreira já contribuí com produções como a série animada The Wingfeather Saga (Angel Studios) e games como Wonderbox e Dice Dreams na PUGA Studios.\n\nSou Mestrando em Indústrias Criativas e Especialista em Game Art. Não porque precisei de um diploma para trabalhar na área, mas porque acredito que entender profundamente o que fazemos nos torna artistas mais completos. Mais do que criar, sempre gostei de ensinar. Já orientei estudantes que hoje trabalham na indústria, e sei exatamente quais dificuldades aparecem no caminho porque eu passei por elas também. A Vini Cavalcante School existe para ser o atalho que eu gostaria de ter tido: um lugar onde você aprende o processo real, com acompanhamento de quem vive isso todos os dias.",
+      body: "Olá, eu sou o Vini Cavalcanti. Sou Senior 3D Character Artist com mais de 10 anos de experiência na indústria de games e entretenimento, focado em desenvolvimento visual e personagens estilizados. Atualmente faço parte do time da E-Line Media, trabalhando no game Endstar, e ao longo da minha carreira já contribuí com produções como a série animada The Wingfeather Saga (Angel Studios) e games como Wonderbox e Dice Dreams na PUGA Studios.\n\nSou Mestrando (M.A. Cand.) em Indústrias Criativas e Especialista em Game Art (PG Dip). Mais do que criar, sempre amei ensinar. Já mentorei alunos que hoje trabalham na indústria, e sei exatamente quais desafios surgem pelo caminho porque eu também passei por eles. A Vini Cavalcanti School existe para ser o atalho que eu gostaria de ter tido: um lugar onde você aprende o processo real, guiado por quem vive isso todos os dias.",
       tags: ["Senior Artist", "10+ anos exp", "Ativo na indústria"]
     },
     courses: {
@@ -173,7 +173,7 @@ export const TRANSLATIONS = {
       comingSoon: "Em Breve"
     },
     mentorship: {
-      sectionTitle: "Mentoria Individual",
+      sectionTitle: "Programa de Mentoria",
       badge: "Mentoria",
       label: "Para quem quer ir mais fundo",
       title: "Vini Cavalcanti Mentorship Program",
@@ -221,7 +221,7 @@ export const TRANSLATIONS = {
       subtitle: "De diferentes níveis e de diferentes partes do mundo, usando esses cursos para construir portfólios reais e dar os próximos passos na indústria.",
       items: [
         { name: "Bruno Martins", country: "", course: "3D Artist / Motion", text: "Os cursos do Vini foram essenciais para me ajudar a migrar para o Blender, e eu recomendo muito. Sempre trabalhei com Cinema 4D e Autodesk Maya e achei difícil a transição, porque o Blender é bem diferente. No entanto, graças aos cursos, já estou usando ele no meu pipeline em alguns projetos e, em breve, estarei utilizando 100% do tempo." },
-        { name: "João Emoroso", country: "", course: "3D Character Artist", text: "O que eu mais gosto na metodologia de ensino do Vini é que, além de utilizar os pipelines dos maiores estúdios de animação, ele apresenta isso de forma descomplicada — ele ensina de um jeito em que até os processos mais profissionais se tornam lógicos e fazem sentido dentro do workflow." },
+        { name: "João Emeroso", country: "", course: "3D Character Artist", text: "O que eu mais gosto na metodologia de ensino do Vini é que, além de utilizar os pipelines dos maiores estúdios de animação, ele apresenta isso de forma descomplicada — ele ensina de um jeito em que até os processos mais profissionais se tornam lógicos e fazem sentido dentro do workflow." },
         { name: "João Gilberto", country: "", course: "3D Artist", text: "Fazer aulas com o Vini tem sido incrível. Eu tinha muito medo de não ser bom o suficiente para acompanhar as aulas, mas a didática e as explicações dele são muito precisas e tornam tudo claro. Ele sempre responde quando temos dúvidas. Hoje, eu acredito que posso me tornar um bom Character Artist em breve." }
       ]
     },

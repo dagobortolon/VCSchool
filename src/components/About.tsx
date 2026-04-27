@@ -12,18 +12,13 @@ interface AboutProps {
 export default function About({ t }: AboutProps) {
   return (
     <section className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center">
-      <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[15px] shadow-xl relative w-full max-w-[480px] mx-auto md:mx-0">
+      <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[15px] shadow-xl relative w-fit mx-auto md:mx-0">
         <img 
           src="/images/about_vini_photo.webp" 
           alt="Vini Cavalcanti" 
-          className="w-full h-auto object-cover rounded-[28px]"
+          className="rounded-[28px] w-auto h-auto block"
           loading="lazy"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-            e.currentTarget.nextElementSibling?.classList.remove('hidden');
-          }}
         />
-        <div className="hidden aspect-[3/4] w-full rounded-[24px] bg-gradient-to-br from-[#EF7722] via-[#F9A335] to-[#0CA6DF]" />
       </div>
       <div className="flex flex-col justify-center">
         <div className="inline-flex w-fit rounded-full bg-white px-3 py-1 text-xs font-medium text-black/60 ring-1 ring-black/5">

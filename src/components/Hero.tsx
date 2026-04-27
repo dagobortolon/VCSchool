@@ -44,9 +44,6 @@ export default function Hero({ t }: HeroProps) {
             className="w-full h-auto object-cover aspect-[4/3] sm:aspect-square md:aspect-[16/11] rounded-[18px]"
             loading="eager"
             fetchPriority="high"
-            onError={(e) => {
-              e.currentTarget.src = "https://images.unsplash.com/photo-1616440893912-2139ad9bf79a?auto=format&fit=crop&q=80&w=1200";
-            }}
           />
         </a>
       </div>
