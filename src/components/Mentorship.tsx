@@ -73,7 +73,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                 {t.title}
               </h3>
               
-              <p className="mt-4 text-lg leading-relaxed text-black/60 line-clamp-3 min-h-[5rem]">
+              <p className="mt-4 text-lg leading-relaxed text-black/60 line-clamp-5 min-h-[8rem]">
                 {t.body}
               </p>
               
