@@ -6,7 +6,7 @@ export const TRANSLATIONS = {
       courses: "Courses",
       mentorship: "Mentorship",
       portfolio: "Portfolio",
-      members: "Members Area"
+      members: "https://members.vinicavalcanti.com/"
     },
     hero: {
       badge: "Vini Cavalcanti School",
@@ -51,6 +51,8 @@ export const TRANSLATIONS = {
       title: "Vini Cavalcanti Mentorship Program",
       body: "10 weeks of direct, one-on-one guidance with a Senior Character Artist who works in the industry every day. You'll build a complete character from the very first blockout to a portfolio-ready final piece, with feedback and support at every stage of the process.\n\nThis is not a course. It's a mentorship.",
       button: "Sign up now!",
+      buttonInstallments: "Sign up now! 3 payments",
+      checkoutInstallments: "https://pay.hotmart.com/D105581670W?off=1l4bjdm8",
       price: "$600",
       investmentLabel: "Investment",
       details: "See +",
@@ -134,7 +136,7 @@ export const TRANSLATIONS = {
       courses: "Cursos",
       mentorship: "Mentoria",
       portfolio: "Portfólio",
-      members: "Área de Membros"
+      members: "https://members.vinicavalcanti.com/"
     },
     hero: {
       badge: "Vini Cavalcanti School",
@@ -179,6 +181,8 @@ export const TRANSLATIONS = {
       title: "Vini Cavalcanti Mentorship Program",
       body: "10 semanas de acompanhamento direto com um Senior Character Artist que trabalha na indústria todos os dias. Você vai construir um personagem completo, do primeiro blockout até a peça final pronta para portfólio, com feedback e suporte em cada etapa do processo.\n\nIsso não é um curso. É uma mentoria.",
       button: "Inscreva-se agora!",
+      buttonInstallments: "Inscreva-se agora! 3x",
+      checkoutInstallments: "https://pay.hotmart.com/D105581670W?off=1l4bjdm8",
       price: "$600",
       investmentLabel: "Investimento",
       details: "Ver +",

@@ -8,6 +8,8 @@ interface MentorshipProps {
     title: string;
     body: string;
     button: string;
+    buttonInstallments: string;
+    checkoutInstallments: string;
     price: string;
     investmentLabel: string;
     details: string;
@@ -142,14 +144,22 @@ export default function Mentorship({ t }: MentorshipProps) {
                 ))}
               </div>
               
-              <div className="mt-12 pt-8 border-t border-black/5">
+              <div className="mt-12 pt-8 border-t border-black/5 flex flex-col sm:flex-row gap-4">
                 <a 
                   href={t.checkout}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95"
+                  className="flex-1 rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95"
                 >
                   {t.button}
+                </a>
+                <a 
+                  href={t.checkoutInstallments}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-2xl border-2 border-[#EF7722] px-1 py-5 text-center text-lg font-bold text-[#EF7722] transition-all hover:bg-[#EF7722] hover:text-white hover:scale-[1.02] active:scale-95"
+                >
+                  {t.buttonInstallments}
                 </a>
               </div>
             </div>
