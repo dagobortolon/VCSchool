@@ -94,6 +94,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                   <div className="flex-1 sm:flex-none">
                     <a 
                       href={t.checkout}
+                      id="mentorship-checkout-preview"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}

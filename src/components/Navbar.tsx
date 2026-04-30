@@ -39,7 +39,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[#FCFBF8]/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 md:py-4 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center">
-          <a href="/" className="flex items-center outline-none focus-visible:ring-2 focus-visible:ring-[#0CA6DF] rounded-lg">
+          <a href="/" id="nav-logo-link" className="flex items-center outline-none focus-visible:ring-2 focus-visible:ring-[#0CA6DF] rounded-lg">
             <img 
               src="/images/logo_vini_cavalcanti_3D.webp" 
               alt="Vini Cavalcanti School" 
