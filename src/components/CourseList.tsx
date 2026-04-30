@@ -138,7 +138,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   <div className="flex items-center gap-3">
                     <a 
                       href={course.checkout}
-                      id={`course-checkout-top-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      id={`course-buy-top-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -190,7 +190,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                 <div className="mt-6">
                   <a 
                     href={course.checkout} 
-                    id={`course-checkout-bottom-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    id={`course-buy-bottom-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"

@@ -80,7 +80,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                     <div className="flex items-center gap-4">
                       <a 
                         href={bundle.checkout}
-                        id={`bundle-checkout-top-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        id={`bundle-buy-top-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
@@ -113,7 +113,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                   <div className="mt-6 flex gap-3">
                     <a 
                       href={bundle.checkout} 
-                      id={`bundle-checkout-bottom-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      id={`bundle-buy-bottom-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
