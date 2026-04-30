@@ -97,7 +97,6 @@ export default function Mentorship({ t }: MentorshipProps) {
                       id="mentorship-buy-preview"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
                       className="btn-compra inline-block w-full sm:w-auto rounded-full bg-[#EF7722] px-8 py-3 text-center text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
                     >
                       {t.button}

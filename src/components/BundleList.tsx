@@ -83,7 +83,6 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                         id={`bundle-buy-top-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
                         className={`btn-compra rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 group-open:hidden ${i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]"}`}
                       >
                         {t.buy}
