@@ -20,19 +20,19 @@ export default function BundleList({ bundles, t }: BundleListProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
-    <section id="bundles" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-10 sm:px-6 lg:px-8">
-      <div className="rounded-[34px] bg-[#F4FAFD] p-6 sm:p-8">
-        <div className="max-w-2xl">
-          <div className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-medium text-[#0CA6DF] ring-1 ring-black/5">
+    <section id="bundles" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-10 sm:px-6 sm:py-20 lg:px-8">
+      <div className="rounded-[34px] bg-[#F4FAFD] p-6 sm:p-10 lg:p-16">
+        <div className="max-w-2xl text-left md:text-left">
+          <div className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-medium text-[#0CA6DF] ring-1 ring-black/5 sm:text-sm">
             {t.badge}
           </div>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h2>
-          <p className="mt-3 text-base leading-7 text-black/65">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{t.title}</h2>
+          <p className="mt-4 text-base leading-relaxed text-black/65 sm:text-lg">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="mt-8 grid gap-5 items-start md:grid-cols-2">
+        <div className="mt-12 grid gap-6 items-start sm:grid-cols-2">
           {bundles.map((bundle, i) => (
             <details 
               key={bundle.title} 
@@ -80,6 +80,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                     <div className="flex items-center gap-4">
                       <a 
                         href={bundle.checkout}
+                        id={`bundle-checkout-top-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
@@ -112,6 +113,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                   <div className="mt-6 flex gap-3">
                     <a 
                       href={bundle.checkout} 
+                      id={`bundle-checkout-bottom-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"

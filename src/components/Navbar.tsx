@@ -19,24 +19,24 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-[#FCFBF8]/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-[#FCFBF8]/95 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 md:py-4 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center outline-none focus-visible:ring-2 focus-visible:ring-[#0CA6DF] rounded-lg">
             <img 
               src="/images/logo_vini_cavalcanti_3D.webp" 
               alt="Vini Cavalcanti School" 
-              className="h-12 w-auto" 
+              className="h-10 w-auto sm:h-12" 
             />
           </a>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden items-center gap-6 md:flex">
-          <a className="text-sm font-medium text-black/70 hover:text-black transition-colors" href="#courses">{t.courses}</a>
-          <a className="text-sm font-medium text-black/70 hover:text-black transition-colors" href="#mentorship">{t.mentorship}</a>
+          <a className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#courses">{t.courses}</a>
+          <a className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#mentorship">{t.mentorship}</a>
           <a 
-            className="text-sm font-medium text-black/70 hover:text-black transition-colors" 
+            className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" 
             href="https://www.artstation.com/viniciuscavalcanti" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -49,7 +49,13 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
           >
             {lang === 'en' ? 'EN | PT' : 'PT | EN'}
           </button>
-          <a className="rounded-full bg-[#0CA6DF] px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#0995c9] hover:shadow-lg transition-all" href={t.members} target="_blank" rel="noopener noreferrer">
+          <a 
+            id="nav-members-desktop"
+            className="rounded-full bg-[#0CA6DF] px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#0995c9] hover:shadow-lg transition-all" 
+            href={t.members} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             {lang === 'en' ? 'Members Area' : 'Área de Membros'}
           </a>
         </div>
@@ -58,7 +64,8 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
         <div className="flex md:hidden">
           <button
             onClick={toggleMenu}
-            className="rounded-lg p-2 text-black/70 hover:bg-black/5 transition-colors"
+            className="rounded-lg p-3 text-black/70 hover:bg-black/5 transition-colors focus-visible:ring-2 focus-visible:ring-[#0CA6DF] outline-none"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -72,20 +79,20 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden bg-[#FCFBF8] md:hidden"
+            className="overflow-hidden bg-[#FCFBF8] md:hidden border-t border-black/5"
           >
-            <div className="flex flex-col gap-4 px-4 pb-8 pt-2">
+            <div className="flex flex-col gap-1 px-4 pb-8 pt-4">
               <a 
                 href="#courses" 
                 onClick={toggleMenu}
-                className="text-lg font-medium text-black/80 hover:text-black"
+                className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.courses}
               </a>
               <a 
                 href="#mentorship" 
                 onClick={toggleMenu}
-                className="text-lg font-medium text-black/80 hover:text-black"
+                className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.mentorship}
               </a>
@@ -94,30 +101,33 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={toggleMenu}
-                className="text-lg font-medium text-black/80 hover:text-black"
+                className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.portfolio}
               </a>
-              <div className="flex pt-2">
+              <div className="flex px-4 pt-4">
                 <button 
                   onClick={() => {
                     setLang(lang === 'en' ? 'pt' : 'en');
                     toggleMenu();
                   }}
-                  className="rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm font-semibold shadow-sm hover:bg-black/5 transition-all"
+                  className="w-full rounded-full border border-black/10 bg-white px-6 py-3.5 text-sm font-semibold shadow-sm active:scale-95 transition-all text-black/70"
                 >
                   {lang === 'en' ? 'EN | PT' : 'PT | EN'}
                 </button>
               </div>
-              <a 
-                href={t.members} 
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={toggleMenu}
-                className="mt-2 block rounded-full bg-[#0CA6DF] px-6 py-4 text-center text-lg font-semibold text-white shadow-md"
-              >
-                {lang === 'en' ? 'Members Area' : 'Área de Membros'}
-              </a>
+              <div className="px-4">
+                <a 
+                  href={t.members} 
+                  id="nav-members-mobile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={toggleMenu}
+                  className="mt-4 block rounded-full bg-[#0CA6DF] px-6 py-4 text-center text-lg font-semibold text-white shadow-md active:scale-95 transition-all"
+                >
+                  {lang === 'en' ? 'Members Area' : 'Área de Membros'}
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

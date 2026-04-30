@@ -30,12 +30,12 @@ export default function Mentorship({ t }: MentorshipProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section id="mentorship" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
-      <div className="text-center mb-12">
-        <div className="inline-flex rounded-full bg-[#0CA6DF]/5 px-3 py-1 text-xs font-medium text-[#0CA6DF] ring-1 ring-[#0CA6DF]/10">
+    <section id="mentorship" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <div className="text-center mb-16">
+        <div className="inline-flex rounded-full bg-[#0CA6DF]/5 px-3 py-1 text-xs font-medium text-[#0CA6DF] ring-1 ring-[#0CA6DF]/10 sm:text-sm">
           {t.badge}
         </div>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
           {t.sectionTitle}
         </h2>
       </div>
@@ -62,8 +62,8 @@ export default function Mentorship({ t }: MentorshipProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
             
-            <div className="flex flex-col flex-grow p-8 sm:p-10">
-              <div className="flex flex-wrap gap-2 text-xs">
+            <div className="flex flex-col flex-grow p-6 sm:p-10 lg:p-12">
+              <div className="flex flex-wrap gap-2 text-[10px] sm:text-xs">
                 <span className="rounded-full bg-[#0CA6DF]/10 px-3 py-1.5 text-[#0CA6DF] font-bold uppercase tracking-wider">
                   {t.limitedSpots}
                 </span>
@@ -72,37 +72,39 @@ export default function Mentorship({ t }: MentorshipProps) {
                 </span>
               </div>
               
-              <h3 className="mt-6 text-3xl font-bold tracking-tight text-black sm:text-4xl">
+              <h3 className="mt-6 text-2xl font-bold tracking-tight text-black sm:text-4xl lg:text-5xl leading-tight">
                 {t.title}
               </h3>
               
-              <p className="mt-4 text-lg leading-relaxed text-black/60 line-clamp-5 min-h-[8rem]">
+              <p className="mt-5 text-base leading-relaxed text-black/60 line-clamp-5 min-h-[6rem] sm:min-h-[8rem] sm:text-lg">
                 {t.body}
               </p>
               
-              <div className="mt-10 flex items-center justify-between gap-6 border-t border-black/5 pt-8">
-                <div className="flex items-center">
-                  <div className="rounded-full border border-black/10 bg-white px-8 py-3 text-base font-semibold shadow-sm transition group-open:hidden hover:bg-black hover:text-white whitespace-nowrap">
+              <div className="mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-black/5 pt-8">
+                <div className="flex items-center order-2 sm:order-1">
+                  <div className="w-full sm:w-auto rounded-full border border-black/10 bg-white px-8 py-3 text-center text-base font-semibold shadow-sm transition group-open:hidden hover:bg-black hover:text-white whitespace-nowrap">
                     {t.details}
                   </div>
-                  <div className="hidden rounded-full border border-black/10 bg-black px-8 py-3 text-base font-semibold text-white shadow-sm group-open:block whitespace-nowrap">
+                  <div className="hidden w-full sm:w-auto rounded-full border border-black/10 bg-black px-8 py-3 text-center text-base font-semibold text-white shadow-sm group-open:block whitespace-nowrap">
                     {t.close}
                   </div>
                 </div>
 
-                <div className="flex items-center gap-5">
-                  <a 
-                    href={t.checkout}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="rounded-full bg-[#EF7722] px-8 py-3 text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
-                  >
-                    {t.button}
-                  </a>
+                <div className="flex items-center justify-between sm:justify-end gap-5 order-1 sm:order-2">
+                  <div className="flex-1 sm:flex-none">
+                    <a 
+                      href={t.checkout}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-block w-full sm:w-auto rounded-full bg-[#EF7722] px-8 py-3 text-center text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
+                    >
+                      {t.button}
+                    </a>
+                  </div>
                   <div className="flex flex-col items-end">
-                    <span className="text-xs font-bold uppercase tracking-widest text-black/30 leading-none mb-1">{t.investmentLabel}</span>
-                    <div className="text-3xl font-bold text-[#EF7722]">
+                    <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-black/30 leading-none mb-1">{t.investmentLabel}</span>
+                    <div className="text-2xl sm:text-3xl font-bold text-[#EF7722]">
                       {t.price}
                     </div>
                   </div>
@@ -125,10 +127,10 @@ export default function Mentorship({ t }: MentorshipProps) {
                 
                 {t.modules.map((module) => (
                   <div key={module.title} className="space-y-6">
-                    <h4 className="text-xl font-bold text-black border-l-4 border-[#0CA6DF] pl-4">
+                    <h4 className="text-lg sm:text-xl font-bold text-black border-l-4 border-[#0CA6DF] pl-4">
                       {module.title}
                     </h4>
-                    <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
                       {module.weeks.map((week) => (
                         <div key={week.label} className="rounded-2xl bg-white p-5 border border-black/5 shadow-sm">
                           <div className="text-xs font-bold text-[#EF7722] uppercase tracking-wider mb-2">
@@ -147,6 +149,7 @@ export default function Mentorship({ t }: MentorshipProps) {
               <div className="mt-12 pt-8 border-t border-black/5 flex flex-col sm:flex-row gap-4">
                 <a 
                   href={t.checkout}
+                  id="mentorship-checkout-full"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95"
@@ -155,6 +158,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                 </a>
                 <a 
                   href={t.checkoutInstallments}
+                  id="mentorship-checkout-installments"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 rounded-2xl border-2 border-[#EF7722] px-1 py-5 text-center text-lg font-bold text-[#EF7722] transition-all hover:bg-[#EF7722] hover:text-white hover:scale-[1.02] active:scale-95"

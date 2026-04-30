@@ -96,7 +96,8 @@ export const TRANSLATIONS = {
       items: [
         { name: "Bruno Martins", country: "", course: "3D Artist / Motion", text: "Vini's courses were essential in helping me switch to Blender, and I highly recommend them. I've always worked with Cinema 4D and Autodesk Maya and found it difficult to switch because Blender is quite different. However, thanks to the courses, I’m already using it in my pipeline for some projects, and soon I’ll be using it 100% of the time." },
         { name: "João Emeroso", country: "", course: "3D Character Artist", text: "What I like most about Vini teaching method is that, beyond using the pipelines of the biggest animation studios, he presents them in an uncomplicated way — he teaches in such a manner that even the most professional processes become logical and make sense within the workflow." },
-        { name: "João Gilberto", country: "", course: "3D Artist", text: "Taking classes with Vini has been amazing. I was very afraid of not being good enough to keep up with his classes, but his teaching and explanations are very precise and make everything clear. He always answers us when we have questions. Today, I believe I can become a good Character Artist soon." }
+        { name: "João Gilberto", country: "", course: "3D Artist", text: "Taking classes with Vini has been amazing. I was very afraid of not being good enough to keep up with his classes, but his teaching and explanations are very precise and make everything clear. He always answers us when we have questions. Today, I believe I can become a good Character Artist soon." },
+        { name: "Rodrigo Kehado", country: "", course: "3D Character Artist", text: "Vini’s classes really elevated the level of my work, especially in how I see the entire process. The retopology part with TopoGun became much clearer. Today, I have a much better understanding of edge loop flow and how to prepare meshes with animation and game performance in mind." }
       ]
     },
     faq: {
@@ -122,7 +123,7 @@ export const TRANSLATIONS = {
       support: ["Lifetime access", "At your own pace", "Taught by someone inside the industry"]
     },
     footer: {
-      rights: "© 2026 Vini Cavalcante School",
+      rights: "© 2026 Vini Cavalcanti School",
       tagline: "Building Digital Legacies through 3D Art",
       links: ["Courses", "Mentorship", "FAQ"]
     },
@@ -226,7 +227,8 @@ export const TRANSLATIONS = {
       items: [
         { name: "Bruno Martins", country: "", course: "3D Artist / Motion", text: "Os cursos do Vini foram essenciais para me ajudar a migrar para o Blender, e eu recomendo muito. Sempre trabalhei com Cinema 4D e Autodesk Maya e achei difícil a transição, porque o Blender é bem diferente. No entanto, graças aos cursos, já estou usando ele no meu pipeline em alguns projetos e, em breve, estarei utilizando 100% do tempo." },
         { name: "João Emeroso", country: "", course: "3D Character Artist", text: "O que eu mais gosto na metodologia de ensino do Vini é que, além de utilizar os pipelines dos maiores estúdios de animação, ele apresenta isso de forma descomplicada — ele ensina de um jeito em que até os processos mais profissionais se tornam lógicos e fazem sentido dentro do workflow." },
-        { name: "João Gilberto", country: "", course: "3D Artist", text: "Fazer aulas com o Vini tem sido incrível. Eu tinha muito medo de não ser bom o suficiente para acompanhar as aulas, mas a didática e as explicações dele são muito precisas e tornam tudo claro. Ele sempre responde quando temos dúvidas. Hoje, eu acredito que posso me tornar um bom Character Artist em breve." }
+        { name: "João Gilberto", country: "", course: "3D Artist", text: "Fazer aulas com o Vini tem sido incrível. Eu tinha muito medo de não ser bom o suficiente para acompanhar as aulas, mas a didática e as explicações dele são muito precisas e tornam tudo claro. Ele sempre responde quando temos dúvidas. Hoje, eu acredito que posso me tornar um bom Character Artist em breve." },
+        { name: "Rodrigo Kehado", country: "", course: "3D Character Artist", text: "As aulas do Vini realmente elevaram o nível do meu trabalho, especialmente na forma como eu enxergo todo o processo. A parte de retopologia com o TopoGun ficou muito mais clara. Hoje, tenho um entendimento muito melhor sobre o fluxo de edge loops e como preparar malhas pensando em animação e performance em jogos." }
       ]
     },
     faq: {
@@ -252,7 +254,7 @@ export const TRANSLATIONS = {
       support: ["Acesso vitalício", "No seu ritmo", "Com quem vive a indústria"]
     },
     footer: {
-      rights: "© 2026 Vini Cavalcante School",
+      rights: "© 2026 Vini Cavalcanti School",
       tagline: "Construindo Legados Digitais através da Arte 3D",
       links: ["Cursos", "Mentoria", "FAQ"]
     },

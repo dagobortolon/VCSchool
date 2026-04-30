@@ -61,20 +61,21 @@ export default function CourseList({ courses, t }: CourseListProps) {
 
   return (
     <section id="courses" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-8">
         <div className="text-center">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h2>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{t.title}</h2>
         </div>
-        <div className="flex justify-center">
-          <div className="flex gap-2 overflow-x-auto pb-1 text-sm text-black/65 scrollbar-hide">
+        <div className="flex justify-center -mx-4 sm:mx-0">
+          <div className="flex flex-wrap justify-center gap-2 px-4 pb-4 text-sm text-black/65">
             {filterOptions.map((opt) => (
               <button 
-                key={opt.value} 
+                key={opt.value}
+                id={`filter-${opt.value}`}
                 onClick={() => {
                   setActiveFilter(opt.value);
                   setIsMobileExpanded(false); // Reset expansion when filtering
                 }}
-                className={`whitespace-nowrap rounded-full border px-4 py-2 shadow-sm transition-all ${activeFilter === opt.value ? 'bg-black text-white border-black' : 'bg-white border-black/10'}`}
+                className={`whitespace-nowrap rounded-full border px-6 py-2.5 shadow-sm transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#EF7722] ${activeFilter === opt.value ? 'bg-black text-white border-black' : 'bg-white border-black/10 hover:bg-black/5'}`}
               >
                 {opt.label}
               </button>
@@ -83,7 +84,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-5 items-start lg:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid gap-6 items-start sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {visibleCourses.map((course, i) => (
           <details 
             key={course.title} 
@@ -137,6 +138,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   <div className="flex items-center gap-3">
                     <a 
                       href={course.checkout}
+                      id={`course-checkout-top-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -188,6 +190,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                 <div className="mt-6">
                   <a 
                     href={course.checkout} 
+                    id={`course-checkout-bottom-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
