@@ -34,17 +34,16 @@ export default function BundleList({ bundles, t }: BundleListProps) {
 
         <div className="mt-12 grid gap-6 items-start sm:grid-cols-2">
           {bundles.map((bundle, i) => (
-            <details 
+            <div 
               key={bundle.title} 
-              open={expandedId === bundle.title}
-              className="group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm transition open:shadow-md"
+              className={`group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm transition-all duration-300 ${expandedId === bundle.title ? 'shadow-md ring-1 ring-black/5' : ''}`}
             >
-              <summary 
+              <div 
                 onClick={(e) => {
-                  e.preventDefault();
+                  if ((e.target as HTMLElement).closest('a')) return;
                   setExpandedId(expandedId === bundle.title ? null : bundle.title);
                 }}
-                className="flex flex-col list-none cursor-pointer h-full"
+                className="flex flex-col cursor-pointer h-full"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img 
@@ -69,10 +68,10 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                   
                   <div className="mt-auto flex items-center justify-between gap-5 border-t border-black/5 pt-6">
                     <div className="flex items-center">
-                      <div className="rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm font-semibold shadow-sm transition group-open:hidden hover:bg-black hover:text-white whitespace-nowrap">
+                      <div className={`rounded-full border border-black/10 px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:bg-black hover:text-white whitespace-nowrap ${expandedId === bundle.title ? 'hidden' : 'bg-white'}`}>
                         {t.details}
                       </div>
-                      <div className="hidden rounded-full border border-black/10 bg-[#F5F5F2] px-5 py-2.5 text-sm font-semibold shadow-sm group-open:block whitespace-nowrap">
+                      <div className={`rounded-full border border-black/10 bg-[#F5F5F2] px-5 py-2.5 text-sm font-semibold shadow-sm whitespace-nowrap ${expandedId === bundle.title ? 'block' : 'hidden'}`}>
                         {t.close}
                       </div>
                     </div>
@@ -83,7 +82,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                         id={`bundle-buy-top-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`btn-compra rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 group-open:hidden ${i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]"}`}
+                        className={`btn-compra rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 ${expandedId === bundle.title ? 'hidden' : (i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]")}`}
                       >
                         {t.buy}
                       </a>
@@ -94,35 +93,37 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                     </div>
                   </div>
                 </div>
-              </summary>
+              </div>
 
-              <div className="px-6 pb-6">
-                <div className="rounded-[22px] bg-[#FAFAF8] p-5 ring-1 ring-black/5">
-                  <div className="mb-4">
-                    <div className="text-sm font-medium">{t.includedTitle}</div>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {bundle.includes.map((inc) => (
-                        <span key={inc} className="rounded-full bg-white border border-black/5 px-3 py-2 text-xs font-medium text-black/70 shadow-sm">
-                          {inc}
-                        </span>
-                      ))}
+              {expandedId === bundle.title && (
+                <div className="px-6 pb-6">
+                  <div className="rounded-[22px] bg-[#FAFAF8] p-5 ring-1 ring-black/5">
+                    <div className="mb-4">
+                      <div className="text-sm font-medium">{t.includedTitle}</div>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {bundle.includes.map((inc) => (
+                          <span key={inc} className="rounded-full bg-white border border-black/5 px-3 py-2 text-xs font-medium text-black/70 shadow-sm">
+                            {inc}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 flex gap-3">
+                      <a 
+                        href={bundle.checkout} 
+                        id={`bundle-buy-bottom-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-compra block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
+                      >
+                        {t.buy}
+                      </a>
                     </div>
                   </div>
-                  
-                  <div className="mt-6 flex gap-3">
-                    <a 
-                      href={bundle.checkout} 
-                      id={`bundle-buy-bottom-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-compra block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
-                    >
-                      {t.buy}
-                    </a>
-                  </div>
                 </div>
-              </div>
-            </details>
+              )}
+            </div>
           ))}
         </div>
       </div>

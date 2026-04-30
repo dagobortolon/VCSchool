@@ -86,17 +86,16 @@ export default function CourseList({ courses, t }: CourseListProps) {
 
       <div className="mt-8 grid gap-6 items-start sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {visibleCourses.map((course, i) => (
-          <details 
+          <div 
             key={course.title} 
-            open={expandedId === course.title}
-            className="group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm transition open:shadow-md"
+            className={`group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-white shadow-sm transition-all duration-300 ${expandedId === course.title ? 'shadow-md ring-1 ring-black/5' : ''}`}
           >
-            <summary 
+            <div 
               onClick={(e) => {
-                e.preventDefault();
+                if ((e.target as HTMLElement).closest('a')) return;
                 setExpandedId(expandedId === course.title ? null : course.title);
               }}
-              className="flex flex-col list-none cursor-pointer h-full"
+              className="flex flex-col cursor-pointer h-full"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img 
@@ -127,10 +126,10 @@ export default function CourseList({ courses, t }: CourseListProps) {
                 <p className="mt-2 text-sm leading-relaxed text-black/60 line-clamp-3 min-h-[4.5rem]">{course.desc}</p>
                 <div className="mt-auto flex items-center justify-between gap-3 border-t border-black/5 pt-5">
                   <div className="flex items-center">
-                    <div className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-medium shadow-sm transition group-open:hidden hover:bg-black hover:text-white whitespace-nowrap">
+                    <div className={`rounded-full border border-black/10 px-4 py-2 text-xs font-medium shadow-sm transition hover:bg-black hover:text-white whitespace-nowrap ${expandedId === course.title ? 'hidden' : 'bg-white'}`}>
                       {t.details}
                     </div>
-                    <div className="hidden rounded-full border border-black/10 bg-[#F5F5F2] px-4 py-2 text-xs font-medium shadow-sm group-open:block whitespace-nowrap">
+                    <div className={`rounded-full border border-black/10 bg-[#F5F5F2] px-4 py-2 text-xs font-medium shadow-sm whitespace-nowrap ${expandedId === course.title ? 'block' : 'hidden'}`}>
                       {t.close}
                     </div>
                   </div>
@@ -141,7 +140,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                       id={`course-buy-top-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-compra rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
+                      className={`btn-compra rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 ${expandedId === course.title ? 'hidden' : ''}`}
                     >
                       {t.buy}
                     </a>
@@ -152,54 +151,56 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   </div>
                 </div>
               </div>
-            </summary>
+            </div>
 
-            <div className="px-5 pb-5">
-              <div className="rounded-[22px] bg-[#FAFAF8] p-4 ring-1 ring-black/5">
-                <div className="grid grid-cols-2 gap-4 text-sm mb-6">
-                  <div>
-                    <div className="text-black/45 text-xs uppercase tracking-wider mb-1">{t.software}</div>
-                    <div className="font-semibold text-black/80">{course.software}</div>
+            {expandedId === course.title && (
+              <div className="px-5 pb-5">
+                <div className="rounded-[22px] bg-[#FAFAF8] p-4 ring-1 ring-black/5">
+                  <div className="grid grid-cols-2 gap-4 text-sm mb-6">
+                    <div>
+                      <div className="text-black/45 text-xs uppercase tracking-wider mb-1">{t.software}</div>
+                      <div className="font-semibold text-black/80">{course.software}</div>
+                    </div>
+                    <div>
+                      <div className="text-black/45 text-xs uppercase tracking-wider mb-1">{t.duration}</div>
+                      <div className="font-semibold text-black/80">{course.duration}</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-black/45 text-xs uppercase tracking-wider mb-1">{t.duration}</div>
-                    <div className="font-semibold text-black/80">{course.duration}</div>
-                  </div>
-                </div>
-                
-                {course.expandedDesc && (
-                  <div className="mb-6">
-                     <p className="text-sm text-black/70 leading-relaxed italic border-l-2 border-[#EF7722]/30 pl-3">
-                      {course.expandedDesc}
-                    </p>
-                  </div>
-                )}
+                  
+                  {course.expandedDesc && (
+                    <div className="mb-6">
+                       <p className="text-sm text-black/70 leading-relaxed italic border-l-2 border-[#EF7722]/30 pl-3">
+                        {course.expandedDesc}
+                      </p>
+                    </div>
+                  )}
 
-                <div className="mt-4">
-                  <div className="text-xs font-bold uppercase tracking-widest text-[#EF7722]">{t.lessonsTitle}</div>
-                  <ul className="mt-4 space-y-3 text-sm text-black/75">
-                    {course.learn.map((item) => (
-                      <li key={item} className="flex gap-3">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#EF7722]/50" />
-                        <span className="leading-tight">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-6">
-                  <a 
-                    href={course.checkout} 
-                    id={`course-buy-bottom-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-compra block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
-                  >
-                    {t.buy}
-                  </a>
+                  <div className="mt-4">
+                    <div className="text-xs font-bold uppercase tracking-widest text-[#EF7722]">{t.lessonsTitle}</div>
+                    <ul className="mt-4 space-y-3 text-sm text-black/75">
+                      {course.learn.map((item) => (
+                        <li key={item} className="flex gap-3">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#EF7722]/50" />
+                          <span className="leading-tight">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mt-6">
+                    <a 
+                      href={course.checkout} 
+                      id={`course-buy-bottom-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-compra block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
+                    >
+                      {t.buy}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </details>
+            )}
+          </div>
         ))}
       </div>
 
