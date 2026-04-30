@@ -69,7 +69,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
           </button>
           <a 
             id="nav-members-desktop"
-            className="rounded-full bg-[#0CA6DF] px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#0995c9] hover:shadow-lg transition-all" 
+            className="btn-portal rounded-full bg-[#0CA6DF] px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#0995c9] hover:shadow-lg transition-all" 
             href={t.members} 
             target="_blank" 
             rel="noopener noreferrer"
@@ -144,7 +144,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={toggleMenu}
-                  className="mt-4 block rounded-full bg-[#0CA6DF] px-6 py-4 text-center text-lg font-semibold text-white shadow-md active:scale-95 transition-all"
+                  className="btn-portal mt-4 block rounded-full bg-[#0CA6DF] px-6 py-4 text-center text-lg font-semibold text-white shadow-md active:scale-95 transition-all"
                 >
                   {lang === 'en' ? 'Members Area' : 'Área de Membros'}
                 </a>

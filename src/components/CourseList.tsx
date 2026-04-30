@@ -142,7 +142,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
+                      className="btn-compra rounded-full bg-[#EF7722] px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
                     >
                       {t.buy}
                     </a>
@@ -193,7 +193,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                     id={`course-buy-bottom-${course.title.toLowerCase().replace(/\s+/g, '-')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
+                    className="btn-compra block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
                   >
                     {t.buy}
                   </a>

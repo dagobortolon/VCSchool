@@ -98,7 +98,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-block w-full sm:w-auto rounded-full bg-[#EF7722] px-8 py-3 text-center text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
+                      className="btn-compra inline-block w-full sm:w-auto rounded-full bg-[#EF7722] px-8 py-3 text-center text-base font-bold text-white shadow-lg hover:bg-[#d9661b] transition-all whitespace-nowrap hover:scale-105 active:scale-95 group-open:hidden"
                     >
                       {t.button}
                     </a>
@@ -153,7 +153,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                   id="mentorship-buy-full"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95"
+                  className="btn-compra flex-1 rounded-2xl bg-[#EF7722] px-6 py-5 text-center text-lg font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-[1.02] active:scale-95"
                 >
                   {t.button}
                 </a>
@@ -162,7 +162,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                   id="mentorship-buy-installments"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 rounded-2xl border-2 border-[#EF7722] px-1 py-5 text-center text-lg font-bold text-[#EF7722] transition-all hover:bg-[#EF7722] hover:text-white hover:scale-[1.02] active:scale-95"
+                  className="btn-compra flex-1 rounded-2xl border-2 border-[#EF7722] px-1 py-5 text-center text-lg font-bold text-[#EF7722] transition-all hover:bg-[#EF7722] hover:text-white hover:scale-[1.02] active:scale-95"
                 >
                   {t.buttonInstallments}
                 </a>

@@ -39,9 +39,9 @@ export default function Footer({ socialLinks, t }: FooterProps) {
         />
         
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 text-black/80 font-medium">
-          <a href="#courses" id="footer-link-courses" className="hover:text-[#EF7722] transition-colors">{t.links[0]}</a>
-          <a href="#mentorship" id="footer-link-mentorship" className="hover:text-[#EF7722] transition-colors">{t.links[1]}</a>
-          <a href="#faq" id="footer-link-faq" className="hover:text-[#EF7722] transition-colors">{t.links[2]}</a>
+          <a href="#courses" id="footer-link-courses" className="btn-footer hover:text-[#EF7722] transition-colors">{t.links[0]}</a>
+          <a href="#mentorship" id="footer-link-mentorship" className="btn-footer hover:text-[#EF7722] transition-colors">{t.links[1]}</a>
+          <a href="#faq" id="footer-link-faq" className="btn-footer hover:text-[#EF7722] transition-colors">{t.links[2]}</a>
         </div>
 
         <div className="flex items-center gap-8 mb-12 text-black/40">
@@ -51,8 +51,10 @@ export default function Footer({ socialLinks, t }: FooterProps) {
               href={item.href} 
               id={`footer-social-${item.name.toLowerCase()}`}
               aria-label={item.name} 
-              className="transition-all hover:text-[#0CA6DF] hover:scale-110"
+              className="btn-social transition-all hover:text-[#0CA6DF] hover:scale-110"
               title={item.name}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {getIcon(item.name)}
             </a>

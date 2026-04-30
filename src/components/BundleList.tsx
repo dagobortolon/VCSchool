@@ -84,7 +84,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className={`rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 group-open:hidden ${i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]"}`}
+                        className={`btn-compra rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95 group-open:hidden ${i === 0 ? "bg-[#EF7722] hover:bg-[#d9661b]" : "bg-[#0CA6DF] hover:bg-[#0995c9]"}`}
                       >
                         {t.buy}
                       </a>
@@ -116,7 +116,7 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                       id={`bundle-buy-bottom-${bundle.title.toLowerCase().replace(/\s+/g, '-')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
+                      className="btn-compra block w-full rounded-xl bg-black px-4 py-4 text-center text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-95"
                     >
                       {t.buy}
                     </a>

@@ -26,7 +26,7 @@ export default function Hero({ t }: HeroProps) {
           <a 
             href="#courses" 
             id="hero-cta-courses"
-            className="w-full sm:w-auto rounded-full bg-[#EF7722] px-8 py-4 text-center text-base font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-105 active:scale-95 hover:bg-[#d96d1f]"
+            className="btn-nav w-full sm:w-auto rounded-full bg-[#EF7722] px-8 py-4 text-center text-base font-bold text-white shadow-xl shadow-[#EF7722]/20 transition-all hover:scale-105 active:scale-95 hover:bg-[#d96d1f]"
           >
             {t.button} ↓
           </a>
@@ -41,7 +41,7 @@ export default function Hero({ t }: HeroProps) {
           id="hero-portfolio-link"
           target="_blank" 
           rel="noopener noreferrer"
-          className="relative block rounded-[30px] bg-white p-[15px] shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-black/5"
+          className="btn-portfolio relative block rounded-[30px] bg-white p-[15px] shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-black/5"
         >
           <img 
             src="/images/hero_image.webp" 
