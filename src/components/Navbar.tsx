@@ -18,6 +18,23 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    if (targetId.startsWith('#')) {
+      e.preventDefault();
+      const element = document.getElementById(targetId.substring(1));
+      if (element) {
+        setIsOpen(false);
+        // Using a slight delay to allow the menu close animation to start
+        // which helps the browser calculate the correct scroll position
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 10);
+      }
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[#FCFBF8]/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 md:py-4 lg:px-8" aria-label="Main navigation">
@@ -33,9 +50,10 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
 
         {/* Desktop Menu */}
         <div className="hidden items-center gap-6 md:flex">
-          <a className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#courses">{t.courses}</a>
-          <a className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#mentorship">{t.mentorship}</a>
+          <a id="nav-link-courses" className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#courses">{t.courses}</a>
+          <a id="nav-link-mentorship" className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#mentorship">{t.mentorship}</a>
           <a 
+            id="nav-link-portfolio"
             className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" 
             href="https://www.artstation.com/viniciuscavalcanti" 
             target="_blank" 
@@ -84,23 +102,26 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
             <div className="flex flex-col gap-1 px-4 pb-8 pt-4">
               <a 
                 href="#courses" 
-                onClick={toggleMenu}
+                id="mobile-nav-courses"
+                onClick={(e) => handleNavClick(e, '#courses')}
                 className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.courses}
               </a>
               <a 
                 href="#mentorship" 
-                onClick={toggleMenu}
+                id="mobile-nav-mentorship"
+                onClick={(e) => handleNavClick(e, '#mentorship')}
                 className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.mentorship}
               </a>
               <a 
                 href="https://www.artstation.com/viniciuscavalcanti" 
+                id="mobile-nav-portfolio"
                 target="_blank" 
                 rel="noopener noreferrer"
-                onClick={toggleMenu}
+                onClick={() => setIsOpen(false)}
                 className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.portfolio}
