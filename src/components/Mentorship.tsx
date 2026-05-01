@@ -29,6 +29,25 @@ interface MentorshipProps {
 export default function Mentorship({ t }: MentorshipProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  const renderBody = (text: string) => {
+    const boldParts = [
+      "New season starts on June 8th, with 10 weeks",
+      "A nova temporada começa em 8 de junho, com 10 semanas"
+    ];
+    
+    for (const part of boldParts) {
+      if (text.startsWith(part)) {
+        return (
+          <>
+            <strong className="font-bold text-black/90">{part}</strong>
+            {text.slice(part.length)}
+          </>
+        );
+      }
+    }
+    return text;
+  };
+
   return (
     <section id="mentorship" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
       <div className="text-center mb-16">
@@ -64,7 +83,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                 <span className="rounded-full bg-[#0CA6DF]/10 px-3 py-1.5 text-[#0CA6DF] font-bold uppercase tracking-wider">
                   {t.limitedSpots}
                 </span>
-                <span className="rounded-full bg-black/5 px-3 py-1.5 text-black/60 font-bold uppercase tracking-wider">
+                <span className="rounded-full bg-[#EF7722]/10 px-3 py-1.5 text-[#EF7722] font-bold tracking-wider">
                   {t.oneOnOne}
                 </span>
               </div>
@@ -74,7 +93,7 @@ export default function Mentorship({ t }: MentorshipProps) {
               </h3>
               
               <p className="mt-5 text-base leading-relaxed text-black/60 line-clamp-5 min-h-[6rem] sm:min-h-[8rem] sm:text-lg">
-                {t.body}
+                {renderBody(t.body)}
               </p>
               
               <div className="mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-black/5 pt-8">
@@ -116,7 +135,7 @@ export default function Mentorship({ t }: MentorshipProps) {
                 <div className="mb-10">
                   <div className="text-xs font-bold uppercase tracking-widest text-[#0CA6DF] mb-4">{t.aboutTitle}</div>
                   <p className="text-lg text-black/70 leading-relaxed whitespace-pre-wrap italic">
-                    {t.body}
+                    {renderBody(t.body)}
                   </p>
                 </div>
 
