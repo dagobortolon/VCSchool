@@ -58,7 +58,7 @@ export const TRANSLATIONS = {
       details: "See +",
       close: "See -",
       limitedSpots: "Limited Spots",
-      oneOnOne: "New Season | June 8",
+      oneOnOne: "New Season | June 8th",
       aboutTitle: "About the mentorship",
       scheduleTitle: "Mentorship Schedule",
       checkout: "https://pay.hotmart.com/D105581670W",
