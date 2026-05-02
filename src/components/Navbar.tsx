@@ -9,6 +9,7 @@ interface NavbarProps {
     courses: string;
     mentorship: string;
     portfolio: string;
+    contact: string;
     members: string;
   };
 }
@@ -61,6 +62,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
           >
             {t.portfolio}
           </a>
+          <a id="nav-link-contact" className="text-sm font-medium text-black/70 hover:text-black transition-colors focus-visible:text-black outline-none" href="#contact">{t.contact}</a>
           <button 
             onClick={() => setLang(lang === 'en' ? 'pt' : 'en')}
             className="rounded-full border border-black/10 bg-white px-3 py-2 text-sm shadow-sm hover:bg-black/5 transition-colors cursor-pointer"
@@ -125,6 +127,14 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
                 className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
               >
                 {t.portfolio}
+              </a>
+              <a 
+                href="#contact" 
+                id="mobile-nav-contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
+                className="rounded-xl px-4 py-3.5 text-lg font-medium text-black/80 hover:bg-black/5 active:bg-black/5 transition-colors"
+              >
+                {t.contact}
               </a>
               <div className="flex px-4 pt-4">
                 <button 

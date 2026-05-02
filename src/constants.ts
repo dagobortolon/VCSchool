@@ -6,6 +6,7 @@ export const TRANSLATIONS = {
       courses: "Courses",
       mentorship: "Mentorship",
       portfolio: "Portfolio",
+      contact: "Contact",
       members: "https://members.vinicavalcanti.com/"
     },
     hero: {
@@ -125,7 +126,24 @@ export const TRANSLATIONS = {
     footer: {
       rights: "© 2026 Vini Cavalcanti School",
       tagline: "Building Digital Legacies through 3D Art",
-      links: ["Courses", "Mentorship", "FAQ"]
+      links: ["Courses", "Mentorship", "FAQ", "Contact"]
+    },
+    contact: {
+      badge: "Contact",
+      title: "Get in touch",
+      subtitle: "Have a question or want to discuss something? Send a message and I'll get back to you as soon as possible.",
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      send: "Send Message",
+      sending: "Sending...",
+      success: "Message sent! I'll get back to you soon.",
+      error: "Something went wrong. Please try again later.",
+      placeholders: {
+        name: "Your name",
+        email: "your@email.com",
+        message: "How can I help you?"
+      }
     },
     sticky: {
       courses: "Browse Courses",
@@ -137,6 +155,7 @@ export const TRANSLATIONS = {
       courses: "Cursos",
       mentorship: "Mentoria",
       portfolio: "Portfólio",
+      contact: "Contato",
       members: "https://members.vinicavalcanti.com/"
     },
     hero: {
@@ -256,7 +275,24 @@ export const TRANSLATIONS = {
     footer: {
       rights: "© 2026 Vini Cavalcanti School",
       tagline: "Construindo Legados Digitais através da Arte 3D",
-      links: ["Cursos", "Mentoria", "FAQ"]
+      links: ["Cursos", "Mentoria", "FAQ", "Contato"]
+    },
+    contact: {
+      badge: "Contato",
+      title: "Fale comigo",
+      subtitle: "Tem alguma dúvida ou quer conversar sobre algo? Envie uma mensagem e eu responderei o mais breve possível.",
+      name: "Nome",
+      email: "E-mail",
+      message: "Mensagem",
+      send: "Enviar Mensagem",
+      sending: "Enviando...",
+      success: "Mensagem enviada! Retornarei em breve.",
+      error: "Algo deu errado. Por favor, tente novamente mais tarde.",
+      placeholders: {
+        name: "Seu nome",
+        email: "seu@email.com",
+        message: "Como posso te ajudar?"
+      }
     },
     sticky: {
       courses: "Ver Cursos",

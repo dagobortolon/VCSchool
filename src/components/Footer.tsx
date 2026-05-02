@@ -30,8 +30,8 @@ const getIcon = (name: string) => {
 
 export default function Footer({ socialLinks, t }: FooterProps) {
   return (
-    <footer className="mx-auto max-w-7xl px-4 py-16 text-sm text-black/50 sm:px-6 lg:px-8">
-      <div className="border-t border-black/5 pt-16 flex flex-col items-center text-center">
+    <footer className="mx-auto max-w-7xl px-4 pt-8 pb-16 text-sm text-black/50 sm:px-6 lg:px-8">
+      <div className="border-t border-black/5 pt-8 flex flex-col items-center text-center">
         <img 
           src="/images/logo_vini_cavalcanti_3D.webp" 
           alt="Vini Cavalcanti School" 

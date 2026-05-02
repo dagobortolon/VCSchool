@@ -11,7 +11,7 @@ interface FAQProps {
 
 export default function FAQ({ t, items }: FAQProps) {
   return (
-    <section id="faq" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
+    <section id="faq" className="mx-auto max-w-5xl scroll-mt-24 px-4 pt-20 pb-10 sm:px-6 sm:pt-28 sm:pb-14 lg:px-8">
       <div className="text-center mb-12">
         <div className="inline-flex rounded-full bg-[#FFF2E7] px-3 py-1 text-xs font-medium text-[#EF7722] ring-1 ring-[#EF7722]/10">
           {t.badge}

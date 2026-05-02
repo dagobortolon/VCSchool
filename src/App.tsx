@@ -7,6 +7,7 @@ import BundleList from './components/BundleList';
 import Mentorship from './components/Mentorship';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { TRANSLATIONS, COURSES_EN, COURSES_PT, BUNDLES, FAQ_ITEMS, SOCIAL_LINKS } from './constants';
 
@@ -29,6 +30,7 @@ export default function App() {
         <Mentorship t={t.mentorship} />
         <Testimonials t={t.testimonials} />
         <FAQ t={t.faq} items={FAQ_ITEMS[lang]} />
+        <Contact t={t.contact} />
       </main>
 
       <Footer t={t.footer} socialLinks={SOCIAL_LINKS} />
