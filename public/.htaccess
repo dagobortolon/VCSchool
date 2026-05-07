@@ -1,0 +1,17 @@
+<IfModule mod_headers.c>
+    # 1. Não fazer cache de arquivos HTML (especialmente index.html)
+    # Isso garante que o navegador sempre baixe o index.html mais atual, 
+    # que contém os links para os novos arquivos JS e CSS gerados pelo Vite.
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+
+    # 2. Fazer cache longo de arquivos estáticos e assets
+    # Como o Vite altera o nome (hash) dos arquivos JS e CSS a cada build, 
+    # podemos deixar o cache no máximo para carregar super rápido.
+    <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
