@@ -34,23 +34,72 @@ export default function Hero({ t }: HeroProps) {
       </div>
 
       <div className="relative">
-        <div className="absolute -left-4 top-10 h-32 w-32 rounded-full bg-[#F9A335]/15 blur-3xl" />
-        <div className="absolute -right-4 bottom-10 h-32 w-32 rounded-full bg-[#0CA6DF]/15 blur-3xl" />
-        <a 
-          href="https://www.artstation.com/viniciuscavalcanti" 
-          id="hero-portfolio-link"
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="btn-portfolio relative block rounded-[30px] bg-white p-[15px] shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-black/5"
-        >
-          <img 
-            src="/images/hero_image.webp" 
-            alt="3D Character Presentation" 
-            className="w-full h-auto object-cover aspect-[4/3] sm:aspect-square md:aspect-[16/11] rounded-[18px]"
-            loading="eager"
-            fetchPriority="high"
-          />
-        </a>
+        <div className="absolute -left-4 top-10 h-32 w-32 rounded-full bg-[#EF7722]/10 blur-3xl opacity-50" />
+        <div className="absolute -right-4 bottom-10 h-32 w-32 rounded-full bg-[#0CA6DF]/10 blur-3xl opacity-50" />
+        
+        <div id="hero-mosaic" className="relative grid grid-cols-12 grid-rows-12 gap-2 sm:gap-3 p-1 aspect-square w-full">
+          {[
+            {
+              src: "https://cdnb.artstation.com/p/assets/images/images/097/688/881/4k/vinicius-cavalcanti-boardinsta01.jpg?1774911959",
+              className: "col-span-6 row-span-6",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/covers/images/097/494/297/smaller_square/vinicius-cavalcanti-vinicius-cavalcanti-puga-studios-puga-studios-puga-wonderbox-thenovice-0.jpg?1774358622",
+              className: "col-span-3 row-span-3",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/images/images/058/848/461/4k/vinicius-cavalcanti-tbrender-005.jpg?1675106094",
+              className: "col-span-3 row-span-3",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/images/images/084/139/361/4k/vinicius-cavalcanti-foxboard1.jpg?1737634614",
+              className: "col-span-4 row-span-3",
+            },
+            {
+              src: "https://cdna.artstation.com/p/assets/images/images/081/859/128/4k/vinicius-cavalcanti-board1.jpg?1731426108",
+              className: "col-span-2 row-span-3",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/images/images/081/686/225/4k/vinicius-cavalcanti-board1.jpg?1730928917",
+              className: "col-span-6 row-span-6",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/images/images/091/074/609/4k/vinicius-cavalcanti-warden3.webp?1755736005",
+              className: "col-span-3 row-span-3",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/covers/images/097/476/291/smaller_square/vinicius-cavalcanti-vinicius-cavalcanti-puga-studios-puga-studios-puga-slide-stars-thumb-2.jpg?1774301615",
+              className: "col-span-3 row-span-3",
+            },
+            {
+              src: "https://cdnb.artstation.com/p/assets/images/images/065/885/225/4k/vinicius-cavalcanti-wip12112.jpg?1691489946",
+              className: "col-span-4 row-span-3",
+            },
+            {
+              src: "https://cdna.artstation.com/p/assets/covers/images/097/494/424/smaller_square/vinicius-cavalcanti-vinicius-cavalcanti-puga-studios-puga-studios-puga-wonderbox-thewarrior-0.jpg",
+              className: "col-span-2 row-span-3",
+            },
+          ].map((image, index) => {
+            return (
+              <a
+                key={index}
+                href="https://www.artstation.com/viniciuscavalcanti"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${image.className} group relative overflow-hidden rounded-xl sm:rounded-2xl bg-neutral-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 block`}
+              >
+              <img
+                src={image.src}
+                alt={`Portfolio piece ${index + 1}`}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
+            </a>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
