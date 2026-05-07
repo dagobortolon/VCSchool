@@ -306,7 +306,7 @@ export const COURSES_EN: Course[] = [
     title: "ZBrush for Stylized Characters",
     desc: "From concept to finished sculpt, learn the complete process for creating original stylized characters in ZBrush.",
     expandedDesc: "This course covers Vini's complete workflow for designing and sculpting original stylized characters. As a Visual Development artist, the focus is on the creative decisions and technical execution required to build a character's identity directly in 3D.\n\nExclusive student bonus 🎁: Purchasing this course gives you free access to an exclusive topology basemesh, brush pack, and custom ZBrush UI. You also receive a 30% discount on the TopoGun 3 Perpetual License.",
-    image: "/images/course-Zbrush_For_Stylized_Characters.webp",
+    image: "/images/course_zbrush.png",
     level: "Beginner / Intermediate",
     lang: "EN (PT Subtitles)",
     software: "ZBrush",
@@ -324,7 +324,7 @@ export const COURSES_EN: Course[] = [
     title: "Retopology in TopoGun 3",
     desc: "Clean, efficient topology is what separates an amateur model from a production-ready one.",
     expandedDesc: "Retopology is the step many artists dread, but it makes all the difference in the final result. This hands-on course will help you build efficient, clean topology without the common beginner mistakes. We'll cover how to tackle tricky areas like hands, create perfect edge loops for animation, and keep your poly count low without sacrificing quality.\n\nExclusive student bonus 🎁: Purchasing this course makes you eligible for a 30% discount on the TopoGun 3 Perpetual License.",
-    image: "/images/course_retopologia_in_topoGun3.webp",
+    image: "/images/course_topogun.png",
     level: "Intermediate",
     lang: "EN (PT Subtitles)",
     software: "TopoGun 3",
@@ -364,7 +364,7 @@ export const COURSES_PT: Course[] = [
     title: "ZBrush para Personagens Estilizados",
     desc: "Do conceito à escultura finalizada, aprenda o processo completo de criação de personagens estilizados originais no ZBrush.",
     expandedDesc: "Nesse curso você vai aprender o processo completo que o Vini usa para projetar e esculpir personagens estilizados originais. Como artista de desenvolvimento visual, o foco está nas decisões criativas e na execução técnica necessárias para construir a identidade de um personagem diretamente no 3D.\n\nBônus exclusivo para alunos 🎁: Ao comprar este curso, você recebe acesso gratuito ao basemesh de topologia exclusivo, pack de brushes e UI personalizada do ZBrush. Você também tem direito a 30% de desconto na Licença Perpétua do TopoGun 3.",
-    image: "/images/course-Zbrush_For_Stylized_Characters.webp",
+    image: "/images/course_zbrush.png",
     level: "Iniciante / Intermediário",
     lang: "EN (Legendas PT)",
     software: "ZBrush",
@@ -382,7 +382,7 @@ export const COURSES_PT: Course[] = [
     title: "Retopologia no TopoGun 3",
     desc: "Topologia limpa e eficiente é o que separa um modelo amador de um modelo pronto para produção.",
     expandedDesc: "Retopologia é aquela etapa que muitos artistas temem, mas que faz toda a diferença no resultado final. Nesse curso prático você vai aprender a construir topologia eficiente e limpa sem cometer os erros mais comuns de quem está começando. Vamos abordar como resolver áreas desafiadoras como as mãos, criar edge loops perfeitos para animação e manter a contagem de polígonos baixa sem abrir mão da qualidade.\n\nBônus exclusivo para alunos 🎁: Ao comprar este curso, você tem direito a 30% de desconto na Licença Perpétua do TopoGun 3.",
-    image: "/images/course_retopologia_in_topoGun3.webp",
+    image: "/images/course_topogun.png",
     level: "Intermediário",
     lang: "EN (Legendas PT)",
     software: "TopoGun 3",
@@ -421,7 +421,7 @@ export const BUNDLES: Bundle[] = [
   {
     title: "Starter Bundle",
     desc: "Uma trilha mais organizada para começar com base técnica e direção visual.",
-    image: "/images/bundle_1.webp",
+    image: "/images/hero_collage.png",
     price: "R$ 597",
     includes: ["Environment Workflow", "Stylized Props", "Portfolio Presentation"],
     checkout: "#"
@@ -429,7 +429,7 @@ export const BUNDLES: Bundle[] = [
   {
     title: "Artist Growth Bundle",
     desc: "Para quem quer evoluir processo, acabamento e leitura visual com mais consistência.",
-    image: "/images/bundle_2.webp",
+    image: "/images/hero_collage.png",
     price: "R$ 797",
     includes: ["Stylized Character", "LookDev", "Advanced Sculpt Details"],
     checkout: "#"

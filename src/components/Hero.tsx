@@ -11,8 +11,13 @@ interface HeroProps {
 
 export default function Hero({ t }: HeroProps) {
   return (
-    <section className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-20 lg:px-8">
-      <div className="text-left md:text-left">
+    <section className="relative mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-20 lg:px-8 overflow-hidden lg:overflow-visible">
+      {/* Decorative Background Fox */}
+      <div className="absolute -left-20 -top-20 -z-10 h-[500px] w-[500px] opacity-[0.03] pointer-events-none rotate-[-12deg]">
+        <img src="/images/bg_fox.png" alt="" className="h-full w-full object-contain" />
+      </div>
+      
+      <div className="text-left md:text-left z-10">
         <div className="mb-4 inline-flex rounded-full bg-[#EFF8FD] px-3 py-1 text-xs font-medium text-[#0CA6DF] ring-1 ring-[#0CA6DF]/10 sm:text-sm">
           {t.badge}
         </div>

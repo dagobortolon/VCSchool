@@ -70,7 +70,7 @@ export default function Mentorship({ t }: MentorshipProps) {
           >
             <div className="relative aspect-[21/9] overflow-hidden">
               <img 
-                src="/images/mentorship_image.webp" 
+                src="/images/course_mentorship.png" 
                 alt={t.title} 
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"

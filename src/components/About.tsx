@@ -34,7 +34,11 @@ export default function About({ t }: AboutProps) {
       // Italic terms (Projects)
       { pattern: /The Wingfeather Saga/g, type: 'italic' },
       { pattern: /Wonderbox/g, type: 'italic' },
-      { pattern: /Dice Dreams/g, type: 'italic' }
+      { pattern: /Dice Dreams/g, type: 'italic' },
+      { pattern: /visual development/g, type: 'italic' },
+      { pattern: /stylized characters/g, type: 'italic' },
+      { pattern: /desenvolvimento visual/g, type: 'italic' },
+      { pattern: /personagens estilizados/g, type: 'italic' }
     ];
 
     // Build a single regex to match any of the patterns
@@ -69,10 +73,15 @@ export default function About({ t }: AboutProps) {
   };
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center">
+    <section className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center overflow-hidden lg:overflow-visible">
+      {/* Decorative Background Fox */}
+      <div className="absolute -right-20 -bottom-20 -z-10 h-[400px] w-[400px] opacity-[0.02] pointer-events-none rotate-[15deg]">
+        <img src="/images/bg_fox.png" alt="" className="h-full w-full object-contain" />
+      </div>
+
       <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[10px] sm:p-[15px] shadow-xl relative w-fit mx-auto md:mx-0 max-w-sm sm:max-w-md md:max-w-none">
         <img 
-          src="https://vinicavalcanti.com/images/about_vini_photo.webp" 
+          src="/images/about_vini_photo.png" 
           alt="Vini Cavalcanti" 
           className="rounded-[28px] w-full h-auto block md:w-auto"
           loading="lazy"
