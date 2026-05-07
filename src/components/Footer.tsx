@@ -33,7 +33,7 @@ export default function Footer({ socialLinks, t }: FooterProps) {
     <footer className="mx-auto max-w-7xl px-4 pt-8 pb-16 text-sm text-black/50 sm:px-6 lg:px-8">
       <div className="border-t border-black/5 pt-8 flex flex-col items-center text-center">
         <img 
-          src="/images/logo_school.png" 
+          src="/images/logo_vini_cavalcanti_3D.webp" 
           alt="Vini Cavalcanti School" 
           className="h-14 w-auto mb-8" 
         />

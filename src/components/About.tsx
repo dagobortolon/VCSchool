@@ -73,15 +73,10 @@ export default function About({ t }: AboutProps) {
   };
 
   return (
-    <section className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center overflow-hidden lg:overflow-visible">
-      {/* Decorative Background Fox */}
-      <div className="absolute -right-20 -bottom-20 -z-10 h-[400px] w-[400px] opacity-[0.02] pointer-events-none rotate-[15deg]">
-        <img src="/images/bg_fox.png" alt="" className="h-full w-full object-contain" />
-      </div>
-
+    <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center">
       <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[10px] sm:p-[15px] shadow-xl relative w-fit mx-auto md:mx-0 max-w-sm sm:max-w-md md:max-w-none">
         <img 
-          src="/images/about_vini_photo.png" 
+          src="https://vinicavalcanti.com/images/about_vini_photo.webp" 
           alt="Vini Cavalcanti" 
           className="rounded-[28px] w-full h-auto block md:w-auto"
           loading="lazy"

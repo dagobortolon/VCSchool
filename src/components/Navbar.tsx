@@ -42,7 +42,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
         <div className="flex items-center">
           <a href="/" id="nav-logo-link" className="flex items-center outline-none focus-visible:ring-2 focus-visible:ring-[#0CA6DF] rounded-lg">
             <img 
-              src="/images/logo_school.png" 
+              src="/images/logo_vini_cavalcanti_3D.webp" 
               alt="Vini Cavalcanti School" 
               className="h-10 w-auto sm:h-12" 
             />
