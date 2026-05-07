@@ -60,7 +60,7 @@ export default function Hero({ t }: HeroProps) {
               className: "col-span-2 row-span-3",
             },
             {
-              src: "https://cdnb.artstation.com/p/assets/images/images/081/686/225/4k/vinicius-cavalcanti-board1.jpg?1730928917",
+              src: "https://cdnb.artstation.com/p/assets/images/images/085/910/221/4k/vinicius-cavalcanti-vinicavalcantirender2.jpg?1741944871",
               className: "col-span-6 row-span-6",
             },
             {

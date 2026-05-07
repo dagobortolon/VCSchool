@@ -76,7 +76,7 @@ export default function About({ t }: AboutProps) {
     <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center">
       <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[10px] sm:p-[15px] shadow-xl relative w-fit mx-auto md:mx-0 max-w-sm sm:max-w-md md:max-w-none">
         <img 
-          src="https://vinicavalcanti.com/images/about_vini_photo.webp" 
+          src="https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/about_vini_photo.webp" 
           alt="Vini Cavalcanti" 
           className="rounded-[28px] w-full h-auto block md:w-auto"
           loading="lazy"
