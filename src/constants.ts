@@ -43,7 +43,8 @@ export const TRANSLATIONS = {
       loadMore: "Load more courses",
       priceLabel: "Price",
       lessonsTitle: "Lessons included",
-      comingSoon: "Coming Soon"
+      comingSoon: "Coming Soon",
+      isNew: "NEW"
     },
     mentorship: {
       sectionTitle: "Mentorship Program",
@@ -192,7 +193,8 @@ export const TRANSLATIONS = {
       loadMore: "Ver mais cursos",
       priceLabel: "Preço",
       lessonsTitle: "Aulas inclusas",
-      comingSoon: "Em Breve"
+      comingSoon: "Em Breve",
+      isNew: "NOVO"
     },
     mentorship: {
       sectionTitle: "Programa de Mentoria",
@@ -342,7 +344,7 @@ export const COURSES_EN: Course[] = [
     title: "Character Design: Baby Allosaurus",
     desc: "From storytelling to final render, a complete stylized character pipeline across 4 modules.",
     expandedDesc: "Creating a memorable character starts long before you open ZBrush. In this course you'll learn to build a stylized character from scratch, going through every stage of the process: from storytelling and intentional design all the way to final scene composition and portfolio render.",
-    image: "https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/course_character_design_baby_allosaurus.webp",
+    image: "https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/Character_Design_Baby_Allosaurus.webp",
     level: "Intermediate",
     lang: "EN (PT Subtitles)",
     software: "ZBrush, Blender",
@@ -354,8 +356,8 @@ export const COURSES_EN: Course[] = [
       "ZBrush — Sculpting, Detailing, and Expression",
       "Final Render — Lighting, Scene, and Visual Storytelling"
     ],
-    checkout: "#",
-    comingSoon: true
+    checkout: "https://pay.hotmart.com/M105761103N",
+    isNew: true
   }
 ];
 
@@ -400,7 +402,7 @@ export const COURSES_PT: Course[] = [
     title: "Character Design: Baby Allosaurus",
     desc: "Do storytelling ao render final, um pipeline completo de personagem estilizado em 4 módulos.",
     expandedDesc: "Criar um personagem memorável começa muito antes de abrir o ZBrush. Nesse curso você vai aprender a construir um personagem estilizado do zero, passando por cada etapa do processo: do storytelling e design intencional até a composição final de cena e render de portfólio.",
-    image: "https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/course_character_design_baby_allosaurus.webp",
+    image: "https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/Character_Design_Baby_Allosaurus.webp",
     level: "Intermediário",
     lang: "EN (Legendas PT)",
     software: "ZBrush, Blender",
@@ -412,8 +414,8 @@ export const COURSES_PT: Course[] = [
       "ZBrush — Escultura, Detalhamento e Expressão",
       "Render Final — Iluminação, Cena e Storytelling Visual"
     ],
-    checkout: "#",
-    comingSoon: true
+    checkout: "https://pay.hotmart.com/M105761103N",
+    isNew: true
   }
 ];
 

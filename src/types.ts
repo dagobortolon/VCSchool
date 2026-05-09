@@ -11,6 +11,7 @@ export interface Course {
   learn: string[];
   checkout: string;
   comingSoon?: boolean;
+  isNew?: boolean;
 }
 
 export interface Bundle {

@@ -26,6 +26,7 @@ interface CourseListProps {
     priceLabel: string;
     lessonsTitle: string;
     comingSoon: string;
+    isNew: string;
   };
 }
 
@@ -101,7 +102,7 @@ export default function CourseList({ courses, t }: CourseListProps) {
                 <img 
                   src={course.image} 
                   alt={course.title} 
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="h-full w-full object-cover object-right transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -109,9 +110,16 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   }}
                 />
                 {course.comingSoon && (
-                  <div className="absolute right-0 top-0 z-10 h-24 w-24 overflow-hidden">
+                  <div className="absolute right-0 top-0 z-10 h-24 w-24 overflow-hidden pointer-events-none">
                     <div className="absolute left-[-10px] top-[26px] w-[140px] rotate-45 bg-[#EF7722] py-1 text-center text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
                       {t.comingSoon}
+                    </div>
+                  </div>
+                )}
+                {course.isNew && (
+                  <div className="absolute right-0 top-0 z-10 h-24 w-24 overflow-hidden pointer-events-none">
+                    <div className="absolute left-[-10px] top-[26px] w-[140px] rotate-45 bg-[#0CA6DF] py-1 text-center text-[10px] font-bold uppercase tracking-widest text-white shadow-lg">
+                      {t.isNew}
                     </div>
                   </div>
                 )}
