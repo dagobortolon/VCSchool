@@ -92,7 +92,8 @@ export default function Hero({ t }: HeroProps) {
                 src={image.src}
                 alt={`Portfolio piece ${index + 1}`}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
+                loading={index < 4 ? "eager" : "lazy"}
+                fetchPriority={index < 4 ? "high" : "auto"}
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />

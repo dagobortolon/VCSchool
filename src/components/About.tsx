@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
 interface AboutProps {
   t: {
@@ -73,13 +74,22 @@ export default function About({ t }: AboutProps) {
   };
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center">
+    <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8 items-center overflow-hidden">
       <div className="overflow-hidden rounded-[40px] border border-black/5 bg-white p-[10px] sm:p-[15px] shadow-xl relative w-fit mx-auto md:mx-0 max-w-sm sm:max-w-md md:max-w-none">
-        <img 
+        <motion.img 
           src="https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/about_vini_photo.webp" 
           alt="Vini Cavalcanti" 
-          className="rounded-[28px] w-full h-auto block md:w-auto"
+          className="rounded-[28px] w-full h-auto block md:w-auto cursor-pointer"
           loading="lazy"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.02 }}
+          transition={{ 
+            duration: 0.8, 
+            ease: "easeOut",
+            scale: { duration: 0.4 } // specifically for hover transition if needed, though Framer handles it
+          }}
         />
       </div>
       <div className="flex flex-col justify-center text-left">
