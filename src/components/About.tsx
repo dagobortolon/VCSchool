@@ -81,6 +81,9 @@ export default function About({ t }: AboutProps) {
           alt="Vini Cavalcanti" 
           className="rounded-[28px] w-full h-auto block md:w-auto cursor-pointer"
           loading="lazy"
+          decoding="async"
+          width="490"
+          height="760"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

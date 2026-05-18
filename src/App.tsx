@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import CourseList from './components/CourseList';
-import BundleList from './components/BundleList';
-import Mentorship from './components/Mentorship';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
 import { TRANSLATIONS, COURSES_EN, COURSES_PT, BUNDLES, FAQ_ITEMS, SOCIAL_LINKS } from './constants';
+
+const About = lazy(() => import('./components/About'));
+const CourseList = lazy(() => import('./components/CourseList'));
+const Mentorship = lazy(() => import('./components/Mentorship'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+
+const LoadingFallback = () => (
+  <div style={{ height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888' }}>
+    ... 
+  </div>
+);
 
 export default function App() {
   const [lang, setLang] = useState<'en' | 'pt'>('en');
@@ -21,19 +27,23 @@ export default function App() {
       
       <main>
         <Hero t={t.hero} />
-        <About t={t.about} />
-        <CourseList 
-          t={t.courses} 
-          courses={lang === 'en' ? COURSES_EN : COURSES_PT} 
-        />
-        {/* <BundleList t={t.bundles} bundles={BUNDLES} /> */}
-        <Mentorship t={t.mentorship} />
-        <Testimonials t={t.testimonials} />
-        <FAQ t={t.faq} items={FAQ_ITEMS[lang]} />
-        <Contact t={t.contact} />
+        <Suspense fallback={<LoadingFallback />}>
+          <About t={t.about} />
+          <CourseList 
+            t={t.courses} 
+            courses={lang === 'en' ? COURSES_EN : COURSES_PT} 
+          />
+          {/* <BundleList t={t.bundles} bundles={BUNDLES} /> */}
+          <Mentorship t={t.mentorship} />
+          <Testimonials t={t.testimonials} />
+          <FAQ t={t.faq} items={FAQ_ITEMS[lang]} />
+          <Contact t={t.contact} />
+        </Suspense>
       </main>
 
-      <Footer t={t.footer} socialLinks={SOCIAL_LINKS} />
+      <Suspense fallback={<LoadingFallback />}>
+        <Footer t={t.footer} socialLinks={SOCIAL_LINKS} />
+      </Suspense>
     </div>
   );
 }

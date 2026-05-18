@@ -95,6 +95,9 @@ export default function Hero({ t }: HeroProps) {
                 loading={index < 4 ? "eager" : "lazy"}
                 fetchPriority={index < 4 ? "high" : "auto"}
                 referrerPolicy="no-referrer"
+                decoding="async"
+                width="400"
+                height="400"
               />
               <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
             </a>

@@ -44,7 +44,12 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
             <img 
               src="https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/logo_vini_cavalcanti_3D.webp" 
               alt="Vini Cavalcanti School" 
-              className="h-10 w-auto sm:h-12" 
+              className="h-10 w-auto sm:h-12"
+              width="180"
+              height="48"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </a>
         </div>

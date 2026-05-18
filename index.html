@@ -51,7 +51,18 @@
   </head>
   <body>
 
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static fallback for instant FCP — replaced when React mounts -->
+      <header style="padding:20px;text-align:center;">
+        <h1 style="font-size:2rem;margin:0;">Vini Cavalcanti School</h1>
+        <p style="margin-top:8px;opacity:0.7;">
+          3D Character Art for Games
+        </p>
+      </header>
+      <main style="padding:40px 20px;text-align:center;">
+        <p>Loading school content...</p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

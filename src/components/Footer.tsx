@@ -35,7 +35,11 @@ export default function Footer({ socialLinks, t }: FooterProps) {
         <img 
           src="https://wp.vinicavalcanti.com/wp-content/uploads/2026/05/logo_vini_cavalcanti_3D.webp" 
           alt="Vini Cavalcanti School" 
-          className="h-14 w-auto mb-8" 
+          className="h-14 w-auto mb-8"
+          loading="lazy"
+          decoding="async"
+          width="180"
+          height="56"
         />
         
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 text-black/80 font-medium">

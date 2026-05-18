@@ -104,6 +104,9 @@ export default function CourseList({ courses, t }: CourseListProps) {
                   alt={course.title} 
                   className="h-full w-full object-cover object-right transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="450"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.nextElementSibling?.classList.remove('hidden');
