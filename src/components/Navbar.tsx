@@ -48,7 +48,7 @@ export default function Navbar({ lang, setLang, t }: NavbarProps) {
               width="180"
               height="48"
               loading="eager"
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="async"
             />
           </a>

@@ -51,6 +51,9 @@ export default function BundleList({ bundles, t }: BundleListProps) {
                     alt={bundle.title} 
                     className="h-full w-full object-cover transition-transform group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="450"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.nextElementSibling?.classList.remove('hidden');

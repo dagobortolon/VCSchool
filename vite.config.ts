@@ -22,7 +22,13 @@ export default defineConfig(({mode}) => {
         }),
         postProcess(renderedRoute) {
           if (renderedRoute.html) {
-             renderedRoute.html = renderedRoute.html.replace(/data-server-rendered="true"/g, '');
+              renderedRoute.html = renderedRoute.html
+               .replace(/data-server-rendered="true"/g, '')
+               .replace(/http:\/\/127\.0\.0\.1:\d+\//g, 'https://vinicavalcanti.com/')
+               .replace(/http:\/\/localhost:\d+\//g, 'https://vinicavalcanti.com/')
+               .replace(/\?utm_source=direto(?:&|&amp;)sck=\d+_\d+/g, '')
+               .replace(/style="opacity: 0;[^"]*"/g, '')
+               .replace(/style="[^"]*transform: translateX\(-?\d+\.?\d*%\)[^"]*"/g, '');
           }
         },
       }),
