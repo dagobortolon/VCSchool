@@ -1,9 +1,12 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import fs from 'fs';
 import {defineConfig, loadEnv} from 'vite';
 import prerender from '@prerenderer/rollup-plugin';
 import PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
+
+const routesList = ['/'];
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
@@ -12,7 +15,7 @@ export default defineConfig(({mode}) => {
       react(), 
       tailwindcss(),
       prerender({
-        routes: ['/'],
+        routes: routesList,
         renderer: new PuppeteerRenderer({
           renderAfterTime: 2000,
           headless: true,
@@ -21,9 +24,18 @@ export default defineConfig(({mode}) => {
           if (renderedRoute.html) {
              renderedRoute.html = renderedRoute.html.replace(/data-server-rendered="true"/g, '');
           }
-          return renderedRoute;
         },
       }),
+      {
+        name: 'generate-sitemap',
+        closeBundle() {
+          const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routesList.map(route => `  <url><loc>https://vinicavalcanti.com${route}</loc></url>`).join('\n')}
+</urlset>`;
+          fs.writeFileSync(path.resolve(__dirname, 'dist', 'sitemap.xml'), sitemap);
+        }
+      }
     ],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
@@ -34,6 +46,7 @@ export default defineConfig(({mode}) => {
       },
     },
     build: {
+      copyPublicDir: true,
       rollupOptions: {
         output: {
           manualChunks: {

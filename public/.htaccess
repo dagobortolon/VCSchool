@@ -1,17 +1,39 @@
-<IfModule mod_headers.c>
-    # 1. Não fazer cache de arquivos HTML (especialmente index.html)
-    # Isso garante que o navegador sempre baixe o index.html mais atual, 
-    # que contém os links para os novos arquivos JS e CSS gerados pelo Vite.
-    <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "no-cache, no-store, must-revalidate"
-        Header set Pragma "no-cache"
-        Header set Expires 0
-    </FilesMatch>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
 
-    # 2. Fazer cache longo de arquivos estáticos e assets
-    # Como o Vite altera o nome (hash) dos arquivos JS e CSS a cada build, 
-    # podemos deixar o cache no máximo para carregar super rápido.
-    <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot)$">
-        Header set Cache-Control "max-age=31536000, public"
-    </FilesMatch>
+  # Forçar HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 1. Se for um arquivo ou diretório real, serve direto
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2. Se existir um index.html pré-renderizado pra essa rota, serve
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+  # 3. Senão, fallback pro SPA (React Router resolve 404)
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# Cache de assets estáticos (1 ano pra arquivos com hash do Vite)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+  # HTML nunca cacheado (pra deploy refletir na hora)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Compressão Gzip (Hostinger suporta)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
